@@ -138,6 +138,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .press-links a{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--ink);text-decoration:none;transition:color .2s}
 .press-links a:hover{color:var(--mid)}
 .eye-placeholder{color:var(--mid);font-style:italic;font-family:var(--serif);font-size:1.02rem;line-height:1.7}
+.sol-gallery{margin-top:40px}
+.sol-section-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.sol-section-label:first-child{margin-top:0}
+.sol-works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.sol-views-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
+.sol-item{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.sol-thumb{width:100%;aspect-ratio:4/3;overflow:hidden;background:#e2dfd9}
+.sol-thumb.sol-landscape{aspect-ratio:3/2}
+.sol-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
+.sol-thumb:hover img{opacity:.85}
+.sol-caption{font-family:var(--serif);font-size:.78rem;font-style:italic;color:var(--mid);line-height:1.4}
 
 /* ABOUT */
 #about{padding:110px 52px 100px}
@@ -395,8 +406,9 @@ nav{padding:18px 22px}
       </div>
       <div class="pp-body-grid fade">
         <div class="pp-text">
-          <p>Texte d'intention à écrire — décris ici ce que Red Scale signifie pour toi, ce que tu cherchais, ce que la technique redscale apporte conceptuellement.</p>
-          <p>Le principe de la pellicule redscale — exposée à l'envers — produit une image dégradée, brûlée. C'est de la nostalgie chimique.</p>
+          <p>Red Scale was born and made in Japan, built around two concepts at the heart of Japanese social life: <em>honne</em> — the true self one keeps hidden — and <em>tatemae</em> — the face one presents to the world. Through the image, the series questions the duality between inner being and social facade.</p>
+          <p>The performers, Dai Matsuoka and Akihito Hichihara, dancers of butoh within the Sankai Juku company, embody this tension between interiority and representation. Their bodies carry both: the discipline of form and the rupture beneath it.</p>
+          <p>The redscale technique — film exposed in reverse — produces images that are degraded, burned, shifted toward red. It is chemical nostalgia: an image that has already begun to disappear before it exists.</p>
         </div>
         <div class="pp-meta-block">
           <div class="pp-meta-row">
@@ -432,7 +444,9 @@ nav{padding:18px 22px}
       </div>
       <div class="pp-body-grid fade">
         <div class="pp-text">
-          <p>Texte d'intention à écrire — les interstices, les espaces flottants entre les lieux, les instants, les êtres.</p>
+          <p><em>In Between</em> is a photographic series exploring the interstices of the world — those floating spaces between places, moments and beings. Each image inscribes itself into a visual narrative where fragments accumulate to form a sensitive, poetic geography.</p>
+          <p>The human figures — faces never shown — carry no defined roles. They inhabit the image without dominating it: anonymous witnesses to a space held in suspension. They are humanity caught in its fleeting passage, inscribed in a world in perpetual motion.</p>
+          <p>The series was photographed across multiple countries, always in the same posture: waiting for the world to reveal its in-between states.</p>
         </div>
         <div class="pp-meta-block">
           <div class="pp-meta-row">
@@ -475,6 +489,66 @@ nav{padding:18px 22px}
         <div class="stat"><span class="stat-n">22%</span><span class="stat-l">sales rate</span></div>
         <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening night</span></div>
       </div>
+      <!-- GALERIE SHAPE OF LIGHT -->
+      <div class="sol-gallery">
+
+        <!-- Œuvres -->
+        <div class="sol-section-label">Works</div>
+        <div class="sol-works-grid">
+          <div class="sol-item">
+            <div class="sol-thumb"><img src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Lin Syouki, 202407S</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb"><img src="images/shape-02.jpg" alt="Lin Syouki 202409S" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Lin Syouki, 202409S</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb"><img src="images/shape-03.jpg" alt="Lin Syouki 202407L" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Lin Syouki, 202407L</p>
+          </div>
+        </div>
+
+        <!-- Install + Exhibition -->
+        <div class="sol-section-label">Exhibition views</div>
+        <div class="sol-views-grid">
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-04.jpg" alt="Install view" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Install view</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-05.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-06.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-07.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
+          </div>
+        </div>
+
+        <!-- Opening -->
+        <div class="sol-section-label">Opening night</div>
+        <div class="sol-views-grid">
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-08.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-09.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
+          </div>
+          <div class="sol-item">
+            <div class="sol-thumb sol-landscape"><img src="images/shape-10.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
+            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
+          </div>
+        </div>
+
+      </div>
+
       <div class="press-block">
         <p class="press-l">Press</p>
         <div class="press-links">
