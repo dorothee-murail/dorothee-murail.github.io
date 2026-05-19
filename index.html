@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,24 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:flex;justify-content:space-between;align-items:baseline;background:var(--bg)}
 .nav-name{font-family:var(--serif);font-size:1rem;font-weight:400;text-decoration:none;color:var(--ink);letter-spacing:.01em;cursor:pointer}
 .nav-links{display:flex;gap:36px;list-style:none}
 .nav-links a{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);font-weight:300;transition:color .2s;cursor:pointer}
 .nav-links a:hover{color:var(--mid)}
 .nav-links a.active{border-bottom:1px solid var(--ink);padding-bottom:1px}
+
+/* PAGES */
 .page{display:none;min-height:100vh}
 .page.active{display:block}
 #home{position:fixed;inset:0;display:none;overflow:hidden}
 #home.active{display:block}
 #home img{width:100%;height:100%;object-fit:cover;opacity:.9;filter:grayscale(5%)}
 .home-tagline{position:absolute;bottom:52px;left:52px;font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(246,244,240,.92);text-shadow:0 1px 12px rgba(0,0,0,.22);line-height:1.7;animation:fadeUp .8s ease forwards}
+
+/* WORK */
 #work{padding:110px 52px 100px}
 .work-inner{max-width:1060px;margin:0 auto}
 .work-tabs{display:flex;gap:0;margin-bottom:64px;border-bottom:1px solid var(--line)}
@@ -29,9 +35,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .work-tab.active{color:var(--ink);border-bottom-color:var(--ink)}
 .work-panel{display:none}
 .work-panel.active{display:block}
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.project-item{padding-bottom:72px;cursor:pointer;text-decoration:none;color:inherit;display:block}
-.project-item:nth-child(even){padding-left:52px;margin-top:100px}
+
+/* PROJECTS GRID — décalage uniforme */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:52px;row-gap:0}
+.project-item{padding-bottom:80px;cursor:pointer;text-decoration:none;color:inherit;display:block}
+.project-item:nth-child(even){margin-top:140px}
 .project-thumb{width:100%;aspect-ratio:4/3;background:#e2dfd9;overflow:hidden;margin-bottom:18px}
 .project-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease,opacity .4s}
 .project-item:hover .project-thumb img{transform:scale(1.025);opacity:.88}
@@ -40,6 +48,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .project-title{font-family:var(--serif);font-size:1.05rem;font-weight:400}
 .project-year{font-size:.7rem;letter-spacing:.08em;color:var(--mid)}
 .project-caption{margin-top:5px;font-size:.76rem;color:var(--mid);font-style:italic}
+
+/* COMMISSIONS */
 .commissions-section{margin-bottom:64px}
 .commissions-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .photo-note{font-size:.72rem;color:var(--mid);font-style:italic;margin-top:8px}
@@ -53,6 +63,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .photo-grid-landscape .thumb img{width:100%;height:100%;object-fit:cover;transition:opacity .3s;display:block}
 .photo-grid-landscape .thumb:hover img{opacity:.8}
 .photo-grid-landscape .thumb-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#cac7c0);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
+
+/* VIDEO */
 .video-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
 .video-item{cursor:pointer}
 .video-thumb{aspect-ratio:16/9;background:#e2dfd9;overflow:hidden;margin-bottom:12px}
@@ -61,6 +73,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .play-icon::after{content:'';border-left:9px solid rgba(15,15,14,.45);border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
 .video-title{font-family:var(--serif);font-size:.95rem}
 .video-caption{font-size:.72rem;color:var(--mid);font-style:italic;margin-top:4px}
+
+/* PROJECT PAGE */
+#project-page{padding:110px 52px 100px}
+.project-page-inner{max-width:900px;margin:0 auto}
+.back-btn{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);cursor:pointer;margin-bottom:64px;display:inline-block;transition:color .2s}
+.back-btn:hover{color:var(--ink)}
+.back-btn::before{content:'← ';letter-spacing:0}
+.pp-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.pp-title{font-family:var(--serif);font-size:2.8rem;font-weight:400;line-height:1.05;margin-bottom:8px}
+.pp-subtitle{font-size:.78rem;color:var(--mid);margin-bottom:52px;letter-spacing:.04em}
+.pp-hero{width:100%;aspect-ratio:16/9;background:#e2dfd9;overflow:hidden;margin-bottom:52px}
+.pp-hero img{width:100%;height:100%;object-fit:cover}
+.pp-hero-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--line)}
+.pp-body-grid{display:grid;grid-template-columns:1fr 320px;gap:80px;margin-bottom:64px}
+.pp-text p{font-family:var(--serif);font-size:1.08rem;line-height:1.82;margin-bottom:20px}
+.pp-text em{font-style:italic}
+.pp-meta-block{padding-top:4px}
+.pp-meta-row{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.pp-meta-row:last-child{border-bottom:none}
+.pp-meta-label{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:6px}
+.pp-meta-value{font-family:var(--serif);font-size:.95rem;line-height:1.5}
+.pp-gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:52px}
+.pp-gallery-item{aspect-ratio:4/3;background:#e2dfd9;overflow:hidden}
+.pp-gallery-item img{width:100%;height:100%;object-fit:cover;transition:opacity .3s;cursor:pointer}
+.pp-gallery-item:hover img{opacity:.85}
+.pp-gallery-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
+.pp-festivals{margin-top:52px;padding-top:32px;border-top:1px solid var(--line)}
+.pp-festivals-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
+.pp-festival-list{display:flex;flex-direction:column;gap:8px}
+.pp-festival-list span{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--mid)}
+
+/* LIGHTBOX */
 .lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(15,15,14,.96);align-items:center;justify-content:center}
 .lightbox.open{display:flex}
 .lightbox-img{max-width:88vw;max-height:88vh;object-fit:contain;animation:fadeUp .3s ease forwards}
@@ -71,6 +115,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .lightbox-prev{left:20px}
 .lightbox-next{right:20px}
 .lightbox-counter{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:rgba(246,244,240,.4);font-size:.68rem;letter-spacing:.14em;font-family:var(--sans)}
+
+/* EYE */
 #research{padding:110px 52px 100px}
 .research-inner{max-width:720px;margin:0 auto}
 .eye-intro{margin-bottom:88px}
@@ -92,6 +138,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .press-links a{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--ink);text-decoration:none;transition:color .2s}
 .press-links a:hover{color:var(--mid)}
 .eye-placeholder{color:var(--mid);font-style:italic;font-family:var(--serif);font-size:1.02rem;line-height:1.7}
+
+/* ABOUT */
 #about{padding:110px 52px 100px}
 .about-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:88px;align-items:start}
 .about-portrait{aspect-ratio:3/4;background:#e2dfd9;overflow:hidden}
@@ -106,29 +154,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .about-contact{padding-top:28px;border-top:1px solid var(--line)}
 .about-contact a{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--ink);text-decoration:none;transition:color .2s}
 .about-contact a:hover{color:var(--mid)}
+
+/* CONTACT */
 #contact{padding:110px 52px 100px}
 .contact-inner{max-width:560px}
 .contact-title{font-family:var(--serif);font-size:2rem;font-weight:400;font-style:italic;margin-bottom:48px;line-height:1.2}
 .contact-email{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
 .contact-email:hover{color:var(--mid);border-color:var(--mid)}
 .contact-note{margin-top:40px;font-size:.78rem;color:var(--mid);line-height:1.65;max-width:360px}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .fade{animation:fadeUp .55s ease forwards}
+
 @media(max-width:720px){
 nav{padding:18px 22px}
 .nav-links{gap:18px}
-#work,#research,#about,#contact{padding:96px 22px 80px}
-.projects-grid{grid-template-columns:1fr}
-.project-item:nth-child(even){padding-left:0;margin-top:0}
+#work,#research,#about,#contact,#project-page{padding:96px 22px 80px}
+.projects-grid{grid-template-columns:1fr;row-gap:0}
+.project-item:nth-child(even){margin-top:0}
 .photo-grid{grid-template-columns:repeat(2,1fr)}
 .photo-grid-landscape{grid-template-columns:1fr}
 .video-grid{grid-template-columns:1fr}
 .about-inner{grid-template-columns:1fr;gap:40px}
 .stats-row{gap:28px;flex-wrap:wrap}
-.home-tagline{left:22px;bottom:40px}}
+.home-tagline{left:22px;bottom:40px}
+.pp-body-grid{grid-template-columns:1fr}
+.pp-gallery{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav>
   <span class="nav-name" onclick="show('home')">Dorothée Murail</span>
   <ul class="nav-links">
@@ -139,40 +195,68 @@ nav{padding:18px 22px}
   </ul>
 </nav>
 
+<!-- HOME -->
 <div id="home" class="page active">
   <img src="images/home.jpg" alt="Dorothée Murail">
-  <div class="home-tagline">Photographe, cinéaste, chercheuse visuelle.<br>Paris — Tokyo.</div>
+  <div class="home-tagline">Photographer, filmmaker, visual researcher.<br>Paris — Tokyo.</div>
 </div>
 
+<!-- WORK -->
 <div id="work" class="page">
   <div class="work-inner">
     <div class="work-tabs">
-      <div class="work-tab active" onclick="tab(this,'panel-projets')">Projets</div>
+      <div class="work-tab active" onclick="tab(this,'panel-projets')">Projects</div>
       <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
-      <div class="work-tab" onclick="tab(this,'panel-video')">Vidéo</div>
+      <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
     </div>
+
+    <!-- PROJECTS -->
     <div id="panel-projets" class="work-panel active fade">
       <div class="projects-grid">
-        <div class="project-item">
-          <div class="project-thumb"><div class="project-thumb-ph">Image</div></div>
-          <div class="project-meta"><span class="project-title">AKA</span><span class="project-year">2022</span></div>
-          <p class="project-caption">Film — Centre Pompidou, 8 festivals internationaux</p>
+
+        <div class="project-item" onclick="showProject('aka')">
+          <div class="project-thumb">
+            <img src="images/aka-cover.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="project-thumb-ph" style="display:none">Image</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-title">AKA</span>
+            <span class="project-year">2020</span>
+          </div>
+          <p class="project-caption">Short Film — Centre Pompidou, 8 international festivals</p>
         </div>
-        <div class="project-item">
-          <div class="project-thumb"><div class="project-thumb-ph">Image</div></div>
-          <div class="project-meta"><span class="project-title">Red Scale</span><span class="project-year">2021</span></div>
-          <p class="project-caption">Série argentique — Sankai Juku, Butoh, Tokyo</p>
+
+        <div class="project-item" onclick="showProject('redscale')">
+          <div class="project-thumb">
+            <img src="images/redscale-cover.jpg" alt="Red Scale" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="project-thumb-ph" style="display:none">Image</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-title">Red Scale</span>
+            <span class="project-year">2021</span>
+          </div>
+          <p class="project-caption">Film photography — Sankai Juku, Butoh, Tokyo</p>
         </div>
-        <div class="project-item">
-          <div class="project-thumb"><div class="project-thumb-ph">Image</div></div>
-          <div class="project-meta"><span class="project-title">In Between</span><span class="project-year">2020</span></div>
-          <p class="project-caption">Série argentique — interstices, espaces flottants</p>
+
+        <div class="project-item" onclick="showProject('inbetween')">
+          <div class="project-thumb">
+            <img src="images/inbetween-cover.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="project-thumb-ph" style="display:none">Image</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-title">In Between</span>
+            <span class="project-year">2020</span>
+          </div>
+          <p class="project-caption">Film photography — interstices, floating spaces</p>
         </div>
+
       </div>
     </div>
+
+    <!-- PHOTO -->
     <div id="panel-photo" class="work-panel fade">
       <div class="commissions-section">
-        <p class="commissions-label">Éditorial · Commercial</p>
+        <p class="commissions-label">Editorial · Commercial</p>
         <div class="photo-grid">
           <div class="thumb" onclick="openLightbox('editorial',0)"><div class="thumb-ph">01</div></div>
           <div class="thumb" onclick="openLightbox('editorial',1)"><div class="thumb-ph">02</div></div>
@@ -183,7 +267,7 @@ nav{padding:18px 22px}
           <div class="thumb" onclick="openLightbox('editorial',6)"><div class="thumb-ph">07</div></div>
           <div class="thumb" onclick="openLightbox('editorial',7)"><div class="thumb-ph">08</div></div>
         </div>
-        <p class="photo-note">Cartier, Dior, Vera Wang, Vogue, Calvin Klein, Boucheron, Repossi, Emilio Pucci</p>
+        <p class="photo-note">Selection 2018–2025</p>
       </div>
       <div class="commissions-section">
         <p class="commissions-label">Reportage · Backstage · Architecture</p>
@@ -195,49 +279,204 @@ nav{padding:18px 22px}
           <div class="thumb" onclick="openLightbox('reportage',4)"><div class="thumb-ph">05</div></div>
           <div class="thumb" onclick="openLightbox('reportage',5)"><div class="thumb-ph">06</div></div>
         </div>
-        <p class="photo-note">Reportage, backstage et espaces — sélection 2018–2025</p>
+        <p class="photo-note">2018–2025</p>
       </div>
     </div>
+
+    <!-- VIDEO : Mode/Commercial first, Clips second -->
     <div id="panel-video" class="work-panel fade">
       <div class="commissions-section">
-        <p class="commissions-label">Clips</p>
+        <p class="commissions-label">Fashion · Commercial</p>
         <div class="video-grid">
-          <div class="video-item"><div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div><p class="video-title">Titre clip 01</p><p class="video-caption">Artiste — Année</p></div>
-          <div class="video-item"><div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div><p class="video-title">Titre clip 02</p><p class="video-caption">Artiste — Année</p></div>
-          <div class="video-item"><div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div><p class="video-title">Titre clip 03</p><p class="video-caption">Artiste — Année</p></div>
+          <div class="video-item">
+            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
+            <p class="video-title">Title 01</p>
+            <p class="video-caption">Client — Year</p>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
+            <p class="video-title">Title 02</p>
+            <p class="video-caption">Client — Year</p>
+          </div>
         </div>
       </div>
       <div class="commissions-section" style="margin-top:56px">
-        <p class="commissions-label">Mode · Commercial</p>
+        <p class="commissions-label">Music Videos</p>
         <div class="video-grid">
-          <div class="video-item"><div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div><p class="video-title">Titre vidéo 01</p><p class="video-caption">Client — Année</p></div>
-          <div class="video-item"><div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div><p class="video-title">Titre vidéo 02</p><p class="video-caption">Client — Année</p></div>
+          <div class="video-item">
+            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
+            <p class="video-title">Title 01</p>
+            <p class="video-caption">Artist — Year</p>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
+            <p class="video-title">Title 02</p>
+            <p class="video-caption">Artist — Year</p>
+          </div>
+          <div class="video-item">
+            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
+            <p class="video-title">Title 03</p>
+            <p class="video-caption">Artist — Year</p>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
+<!-- PROJECT PAGE -->
+<div id="project-page" class="page">
+  <div class="project-page-inner">
+    <span class="back-btn fade" onclick="show('work')">Back to Work</span>
+
+    <!-- AKA -->
+    <div id="pp-aka" class="pp-content" style="display:none">
+      <p class="pp-kicker fade">Short Film · 2020</p>
+      <h1 class="pp-title fade">AKA</h1>
+      <p class="pp-subtitle fade">Dorothée Murail — Paris / Tokyo</p>
+      <div class="pp-hero fade">
+        <img src="images/aka-hero.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="pp-hero-ph" style="display:none">Image</div>
+      </div>
+      <div class="pp-body-grid fade">
+        <div class="pp-text">
+          <p><em>AKA</em> responds to a rare demand: expressing through the mediating power of art an unspeakable state of being — a mysterious, pathological condition at the threshold between presence and disappearance.</p>
+          <p>The short film features a butoh dancer performing the "dance of the soul", described by master Kazuo Ohno as "a space that connects life and death." Shot on film, the work navigates the tension between <em>honne</em> — one's true inner feelings — and <em>tatemae</em>, the public mask one presents to the world.</p>
+          <p>The film exists in the space where identity begins to fracture: not yet broken, not yet whole. The butoh body becomes the site of that fracture — simultaneously present and disappearing, human and something else entirely.</p>
+        </div>
+        <div class="pp-meta-block">
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Format</p>
+            <p class="pp-meta-value">Short Film</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Year</p>
+            <p class="pp-meta-value">Filmed 2019 — Released 2020</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Performer</p>
+            <p class="pp-meta-value">Sachiko — Sankai Juku</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Presented at</p>
+            <p class="pp-meta-value">Centre Pompidou, Paris<br>Nuit Blanche Kyoto<br>8 international festivals</p>
+          </div>
+        </div>
+      </div>
+      <div class="pp-gallery fade">
+        <div class="pp-gallery-item">
+          <img src="images/aka-01.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pp-gallery-ph" style="display:none">Image</div>
+        </div>
+        <div class="pp-gallery-item">
+          <img src="images/aka-02.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pp-gallery-ph" style="display:none">Image</div>
+        </div>
+        <div class="pp-gallery-item">
+          <img src="images/aka-03.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pp-gallery-ph" style="display:none">Image</div>
+        </div>
+        <div class="pp-gallery-item">
+          <img src="images/aka-04.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pp-gallery-ph" style="display:none">Image</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RED SCALE -->
+    <div id="pp-redscale" class="pp-content" style="display:none">
+      <p class="pp-kicker fade">Film Photography · 2021</p>
+      <h1 class="pp-title fade">Red Scale</h1>
+      <p class="pp-subtitle fade">Sankai Juku — Tokyo</p>
+      <div class="pp-hero fade">
+        <img src="images/redscale-hero.jpg" alt="Red Scale" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="pp-hero-ph" style="display:none">Image</div>
+      </div>
+      <div class="pp-body-grid fade">
+        <div class="pp-text">
+          <p>Texte d'intention à écrire — décris ici ce que Red Scale signifie pour toi, ce que tu cherchais, ce que la technique redscale apporte conceptuellement.</p>
+          <p>Le principe de la pellicule redscale — exposée à l'envers — produit une image dégradée, brûlée. C'est de la nostalgie chimique.</p>
+        </div>
+        <div class="pp-meta-block">
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Format</p>
+            <p class="pp-meta-value">Film photography — Redscale</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Year</p>
+            <p class="pp-meta-value">2021</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Subject</p>
+            <p class="pp-meta-value">Sankai Juku — Butoh, Tokyo</p>
+          </div>
+        </div>
+      </div>
+      <div class="pp-gallery fade">
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+      </div>
+    </div>
+
+    <!-- IN BETWEEN -->
+    <div id="pp-inbetween" class="pp-content" style="display:none">
+      <p class="pp-kicker fade">Film Photography · 2020</p>
+      <h1 class="pp-title fade">In Between</h1>
+      <p class="pp-subtitle fade">Série argentique</p>
+      <div class="pp-hero fade">
+        <img src="images/inbetween-hero.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="pp-hero-ph" style="display:none">Image</div>
+      </div>
+      <div class="pp-body-grid fade">
+        <div class="pp-text">
+          <p>Texte d'intention à écrire — les interstices, les espaces flottants entre les lieux, les instants, les êtres.</p>
+        </div>
+        <div class="pp-meta-block">
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Format</p>
+            <p class="pp-meta-value">Film photography</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Year</p>
+            <p class="pp-meta-value">2020</p>
+          </div>
+        </div>
+      </div>
+      <div class="pp-gallery fade">
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+        <div class="pp-gallery-item"><div class="pp-gallery-ph">Image</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EYE -->
 <div id="research" class="page">
   <div class="research-inner">
     <div class="eye-intro fade">
-      <p>Un regard construit depuis sept ans — archives visuelles,<br>rencontres avec des artistes à la marge, intuitions<br>qui précèdent toujours les mots.</p>
+      <p>Seven years before the projects existed,<br>there were already images — hybrid bodies,<br>sick spaces, beings at the edge of something.<br>Eye is where projects begin before they have a name.</p>
     </div>
     <div class="eye-project fade">
       <p class="eye-kicker">Curation · Tokyo · 2025</p>
       <h2 class="eye-title">Shape of Light<br><em>Lin Syouki</em></h2>
-      <p class="eye-subtitle">KURA, Shibuya — Mai 2025</p>
-      <p class="eye-body">La première fois que j'ai vu le travail de Lin, quelque chose s'est imposé immédiatement : ce n'était pas un effet. C'était le principe même de l'œuvre. Le regard ne découvre pas l'image — <em>il la produit.</em></p>
-      <p class="eye-body">Lin travaille le tissu réfléchissant comme une matière vivante : il le froisse, le tend, le fixe. Ce qui en résulte n'existe pas vraiment à distance. Il faut bouger pour le voir. Il faut être là.</p>
-      <p class="eye-body">Mon intention n'était pas d'accrocher des tableaux, mais de construire les conditions d'une expérience. Six ans au Japon ont modifié ma façon de composer l'espace : le vide n'est pas une absence — c'est un matériau.</p>
+      <p class="eye-subtitle">KURA, Shibuya — May 2025</p>
+      <p class="eye-body">The first time I saw Lin's work, something became immediately clear: it wasn't an effect. It was the very principle of the piece. The gaze doesn't discover the image — <em>it produces it.</em></p>
+      <p class="eye-body">Lin works reflective fabric as a living material: crumpling it, stretching it, fixing it. What results doesn't quite exist at a distance. You have to move to see it. You have to be there.</p>
+      <p class="eye-body">My intention was not to hang paintings, but to construct the conditions of an experience. Six years in Japan changed the way I compose space: emptiness is not an absence — it is a material.</p>
       <div class="stats-row">
-        <div class="stat"><span class="stat-n">18</span><span class="stat-l">œuvres</span></div>
-        <div class="stat"><span class="stat-n">4</span><span class="stat-l">vendues</span></div>
-        <div class="stat"><span class="stat-n">22%</span><span class="stat-l">taux de vente</span></div>
-        <div class="stat"><span class="stat-n">80+</span><span class="stat-l">vernissage</span></div>
+        <div class="stat"><span class="stat-n">18</span><span class="stat-l">works</span></div>
+        <div class="stat"><span class="stat-n">4</span><span class="stat-l">sold</span></div>
+        <div class="stat"><span class="stat-n">22%</span><span class="stat-l">sales rate</span></div>
+        <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening night</span></div>
       </div>
       <div class="press-block">
-        <p class="press-l">Presse</p>
+        <p class="press-l">Press</p>
         <div class="press-links">
           <a href="https://www.timeout.com/tokyo/art/shape-of-light-lin-syouki" target="_blank">Time Out Tokyo →</a>
           <a href="https://www.tokyoartbeat.com/en/events/-/Lin-Syouki-Shape-of-light/ultrasupernew-kura/2025-05-30" target="_blank">Tokyo Art Beat →</a>
@@ -246,37 +485,49 @@ nav{padding:18px 22px}
       </div>
     </div>
     <div class="eye-project fade">
-      <p class="eye-kicker">Archive visuelle · En cours</p>
+      <p class="eye-kicker">Visual Archive · Ongoing</p>
       <h2 class="eye-title">Seven Years<br><em>of Looking</em></h2>
-      <p class="eye-subtitle">Références, intuitions, obsessions — 2018–2025</p>
-      <p class="eye-placeholder">Une sélection éditorialisée d'images, de fragments et de références construits depuis 2018. Pas un blog — une archive de ce qui précède toujours les projets. À venir.</p>
+      <p class="eye-subtitle">References, intuitions, obsessions — 2018–2025</p>
+      <p class="eye-placeholder">An edited selection of images, fragments and references built since 2018. Not a blog — an archive of what always precedes the work. Coming soon.</p>
     </div>
   </div>
 </div>
 
+<!-- ABOUT -->
 <div id="about" class="page">
   <div class="about-inner fade">
-    <div class="about-portrait"><div class="about-portrait-ph"></div></div>
+    <div class="about-portrait">
+      <img src="images/portrait.jpg" alt="Dorothée Murail" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="about-portrait-ph" style="display:none"></div>
+    </div>
     <div class="about-col">
       <h1 class="about-name">Dorothée<br>Murail</h1>
-      <p class="about-bio">Image-maker dont le travail explore les seuils — entre cultures, entre états, entre ce qui se montre et ce qui résiste à être vu.<br><br>Formée à La Cambre et aux Gobelins, elle développe depuis plus de dix ans une pratique qui traverse la photographie, le cinéma et la recherche visuelle. Ses projets personnels — ancrés dans les tensions culturelles et les espaces interstitiels — ont été présentés au Centre Pompidou et lors de la Nuit Blanche de Kyoto.<br><br>En parallèle, elle collabore avec des maisons et institutions de référence — Cartier, Dior, Vogue — sur des projets où l'image est un enjeu. Son travail curatorial, né d'une archive visuelle construite sur plusieurs années, prolonge cette même posture : non pas classer le monde en images, mais en révéler les frictions.</p>
-      <p class="about-ref-label">Collaborations sélectionnées</p>
+      <p class="about-bio">
+        An image-maker whose work explores thresholds — between cultures, between states, between what shows itself and what resists being seen.<br><br>
+        Trained at La Cambre and Les Gobelins, she has developed over ten years a practice that crosses photography, cinema and visual research. Her personal projects — rooted in cultural tensions and interstitial spaces — have been presented at Centre Pompidou and Nuit Blanche Kyoto.<br><br>
+        In parallel, she collaborates with leading houses and institutions — Cartier, Dior, Vogue — on projects where the image is at stake. Her curatorial work, born from a visual archive built over several years, extends the same posture: not to classify the world in images, but to reveal its frictions.
+      </p>
+      <p class="about-ref-label">Selected collaborations</p>
       <div class="about-refs">
         <span>Dior</span><span>Calvin Klein</span><span>Vogue US</span><span>Ami</span><span>Ana Khouri</span><span>Boycott Magazine</span><span>Vision Paradox Tokyo</span><span>Officine Universelle Bully</span><span>Vera Wang</span><span>Boucheron</span><span>Emilio Pucci</span><span>Cartier</span><span>Hugo Matha</span><span>Harper's Bazaar</span><span>Karl Lagerfeld</span><span>Repossi</span><span>Centre Pompidou</span><span>Nuit Blanche Kyoto</span><span>Joe Hisaishi</span>
       </div>
-      <div class="about-contact"><a href="mailto:contact@dorothee-murail.com">contact@dorothee-murail.com</a></div>
+      <div class="about-contact">
+        <a href="mailto:contact@dorothee-murail.com">contact@dorothee-murail.com</a>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- CONTACT -->
 <div id="contact" class="page">
   <div class="contact-inner fade">
-    <h2 class="contact-title">Travaillons<br>ensemble.</h2>
+    <h2 class="contact-title">Let's work<br>together.</h2>
     <a href="mailto:contact@dorothee-murail.com" class="contact-email">contact@dorothee-murail.com</a>
-    <p class="contact-note">Basée entre Paris et Tokyo.<br>Disponible pour commandes, collaborations, projets curatoriaux.</p>
+    <p class="contact-note">Based between Paris and Tokyo.<br>Available for commissions, collaborations, curatorial projects.</p>
   </div>
 </div>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
   <span class="lightbox-prev" onclick="moveLightbox(-1)">←</span>
@@ -286,10 +537,11 @@ nav{padding:18px 22px}
 </div>
 
 <script>
-const pages=['home','work','research','about','contact'];
+const pages=['home','work','project-page','research','about','contact'];
 function show(id){
   pages.forEach(p=>{
-    document.getElementById(p).classList.remove('active');
+    const el=document.getElementById(p);
+    if(el)el.classList.remove('active');
     const n=document.getElementById('n-'+p);
     if(n)n.classList.remove('active');
   });
@@ -297,7 +549,10 @@ function show(id){
   if(t){t.classList.add('active');t.querySelectorAll('.fade').forEach(el=>{el.style.animation='none';void el.offsetHeight;el.style.animation=''});window.scrollTo(0,0)}
   const n=document.getElementById('n-'+id);
   if(n)n.classList.add('active');
+  // keep Work nav active when on project page
+  if(id==='project-page'){const nw=document.getElementById('n-work');if(nw)nw.classList.add('active')}
 }
+
 function tab(el,panelId){
   document.querySelectorAll('.work-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.work-panel').forEach(p=>p.classList.remove('active'));
@@ -305,6 +560,14 @@ function tab(el,panelId){
   const panel=document.getElementById(panelId);
   if(panel){panel.classList.add('active');panel.querySelectorAll('.fade').forEach(el=>{el.style.animation='none';void el.offsetHeight;el.style.animation=''})}
 }
+
+function showProject(id){
+  document.querySelectorAll('.pp-content').forEach(el=>el.style.display='none');
+  const pp=document.getElementById('pp-'+id);
+  if(pp)pp.style.display='block';
+  show('project-page');
+}
+
 const galleries={
   editorial:['images/photo-edit-01.jpg','images/photo-edit-02.jpg','images/photo-edit-03.jpg','images/photo-edit-04.jpg','images/photo-edit-05.jpg','images/photo-edit-06.jpg','images/photo-edit-07.jpg','images/photo-edit-08.jpg'],
   reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg']
