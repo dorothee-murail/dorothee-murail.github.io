@@ -67,12 +67,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 /* VIDEO */
 .video-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
 .video-item{cursor:pointer}
-.video-thumb{aspect-ratio:16/9;background:#e2dfd9;overflow:hidden;margin-bottom:12px}
+.video-thumb{aspect-ratio:16/9;background:#e2dfd9;overflow:hidden;margin-bottom:12px;position:relative}
+.video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
+.video-item:hover .video-thumb img{opacity:.75}
 .video-thumb-ph{width:100%;height:100%;background:linear-gradient(140deg,#e0ddd7,#ccc9c2);display:flex;align-items:center;justify-content:center}
-.play-icon{width:36px;height:36px;border:1px solid rgba(15,15,14,.3);border-radius:50%;display:flex;align-items:center;justify-content:center}
-.play-icon::after{content:'';border-left:9px solid rgba(15,15,14,.45);border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
+.video-play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;background:rgba(15,15,14,.15)}
+.video-item:hover .video-play-overlay{opacity:1}
 .video-title{font-family:var(--serif);font-size:.95rem}
 .video-caption{font-size:.72rem;color:var(--mid);font-style:italic;margin-top:4px}
+
+/* VIDEO PLAYER MODAL */
+.video-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(15,15,14,.97);align-items:center;justify-content:center;flex-direction:column}
+.video-modal.open{display:flex}
+.video-modal-inner{width:88vw;max-width:1100px}
+.video-modal-inner iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+.video-modal-close{position:absolute;top:28px;right:36px;color:rgba(246,244,240,.7);font-size:1.4rem;cursor:pointer;font-weight:300;transition:color .2s;line-height:1;font-family:var(--sans)}
+.video-modal-close:hover{color:var(--bg)}
+.video-modal-title{margin-top:20px;font-family:var(--serif);font-size:.85rem;font-style:italic;color:rgba(246,244,240,.5);text-align:center}
 
 /* PROJECT PAGE */
 #project-page{padding:110px 52px 100px}
@@ -411,43 +422,80 @@ nav{padding:18px 22px}
       </div>
     </div>
 
-    <!-- VIDEO : Mode/Commercial first, Clips second -->
+    <!-- VIDEO -->
     <div id="panel-video" class="work-panel fade">
+
       <div class="commissions-section">
         <p class="commissions-label">Fashion · Commercial</p>
         <div class="video-grid">
-          <div class="video-item">
-            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
-            <p class="video-title">Title 01</p>
-            <p class="video-caption">Client — Year</p>
+
+          <div class="video-item" onclick="openVideo('vimeo','1136450768')">
+            <div class="video-thumb">
+              <img src="images/video/video-fashion-01-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">Kissui Campaign</p>
+            <p class="video-caption">Commercial</p>>
+            <div class="video-thumb">
+              <img src="images/video/video-fashion-02-cover.jpg" alt="Scala Regia x Chanel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">Scala Regia × Chanel</p>
+            <p class="video-caption">Fashion Film</p>
           </div>
-          <div class="video-item">
-            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
-            <p class="video-title">Title 02</p>
-            <p class="video-caption">Client — Year</p>
+
+          <div class="video-item" onclick="openVideo('youtube','BssiUzY4TKU')">
+            <div class="video-thumb">
+              <img src="images/video/video-fashion-03-cover.jpg" alt="Boycott x St Laurent" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">Boycott × Saint Laurent</p>
+            <p class="video-caption">Fashion Film</p>
           </div>
+
         </div>
       </div>
+
       <div class="commissions-section" style="margin-top:56px">
         <p class="commissions-label">Music Videos</p>
         <div class="video-grid">
-          <div class="video-item">
-            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
-            <p class="video-title">Title 01</p>
-            <p class="video-caption">Artist — Year</p>
+
+          <div class="video-item" onclick="openVideo('youtube','faf98cNY8A8')">
+            <div class="video-thumb">
+              <img src="images/video/video-music-01-cover.jpg" alt="Joe Hisaishi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">Ashitaka & San</p>
+            <p class="video-caption">Joe Hisaishi — Princess Mononoke</p>
           </div>
-          <div class="video-item">
-            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
-            <p class="video-title">Title 02</p>
-            <p class="video-caption">Artist — Year</p>
+
+          <div class="video-item" onclick="openVideo('youtube','cXoVLrJ4EGE')">
+            <div class="video-thumb">
+              <img src="images/video/video-music-02-cover.jpg" alt="Bleu Blondino" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">Bleu</p>
+            <p class="video-caption">Blondino</p>
           </div>
-          <div class="video-item">
-            <div class="video-thumb"><div class="video-thumb-ph"><div class="play-icon"></div></div></div>
-            <p class="video-title">Title 03</p>
-            <p class="video-caption">Artist — Year</p>
+
+          <div class="video-item" onclick="openVideo('youtube','E9n227IwOIg')">
+            <div class="video-thumb">
+              <img src="images/video/video-music-03-cover.jpg" alt="OK ou KO Emmy Liyana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
+              <div class="video-play-overlay"><div class="play-icon"></div></div>
+            </div>
+            <p class="video-title">OK ou KO</p>
+            <p class="video-caption">Emmy Liyana</p>
           </div>
+
         </div>
       </div>
+
     </div>
 
   </div>
@@ -718,6 +766,15 @@ nav{padding:18px 22px}
   </div>
 </div>
 
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="video-modal" onclick="closeVideoOutside(event)">
+  <span class="video-modal-close" onclick="closeVideo()">✕</span>
+  <div class="video-modal-inner">
+    <iframe id="video-iframe" src="" allowfullscreen allow="autoplay"></iframe>
+    <p class="video-modal-title" id="video-modal-title"></p>
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
@@ -804,7 +861,24 @@ function openSerie(index){
   document.body.style.overflow='hidden';
 }
 
-let currentTitle='';
+function openVideo(platform, id){
+  let src='';
+  if(platform==='vimeo') src=`https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0`;
+  if(platform==='youtube') src=`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+  document.getElementById('video-iframe').src=src;
+  document.getElementById('video-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  document.getElementById('video-iframe').src='';
+  document.getElementById('video-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeVideoOutside(e){
+  if(e.target===document.getElementById('video-modal')) closeVideo();
+}
+
+
 
 let currentGallery=[],currentIndex=0;
 function openLightbox(gallery,index){currentGallery=galleries[gallery];currentIndex=index;currentTitle='';updateLightbox();document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
