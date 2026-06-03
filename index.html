@@ -122,6 +122,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 
 /* EDITORIAL GRID */
 .editorial-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:12px}
+.editorial-grid-6{grid-template-columns:repeat(6,1fr)}
 .ed-item{cursor:pointer}
 .ed-thumb{position:relative;aspect-ratio:2/3;overflow:hidden;background:#e2dfd9}
 .ed-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,opacity .4s}
@@ -300,41 +301,9 @@ nav{padding:18px 22px}
     <div id="panel-photo" class="work-panel fade">
       <div class="commissions-section">
         <p class="commissions-label">Editorial · Commercial</p>
-        <div class="editorial-grid">
+        <div class="editorial-grid editorial-grid-6">
 
           <div class="ed-item" onclick="openSerie(0)">
-            <div class="ed-thumb">
-              <img src="images/editorial-01-cover.jpg" alt="Mojeh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Mojeh × Cartier</span></div>
-            </div>
-          </div>
-
-          <div class="ed-item" onclick="openSerie(1)">
-            <div class="ed-thumb">
-              <img src="images/editorial-02-cover.jpg" alt="Kissui" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Kissui Campaign</span></div>
-            </div>
-          </div>
-
-          <div class="ed-item" onclick="openSerie(2)">
-            <div class="ed-thumb">
-              <img src="images/editorial-03-cover.jpg" alt="The Fashionisto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>The Fashionisto</span></div>
-            </div>
-          </div>
-
-          <div class="ed-item" onclick="openSerie(3)">
-            <div class="ed-thumb">
-              <img src="images/editorial-04-cover.jpg" alt="Scala Regia Dior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Scala Regia × Dior</span></div>
-            </div>
-          </div>
-
-          <div class="ed-item" onclick="openSerie(4)">
             <div class="ed-thumb">
               <img src="images/editorial-05-cover.jpg" alt="Boycott" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
@@ -342,15 +311,23 @@ nav{padding:18px 22px}
             </div>
           </div>
 
-          <div class="ed-item" onclick="openSerie(5)">
+          <div class="ed-item" onclick="openSerie(1)">
             <div class="ed-thumb">
-              <img src="images/editorial-06-cover.jpg" alt="Scala Regia Chanel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-02-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Scala Regia × Chanel</span></div>
+              <div class="ed-hover"><span>Kissui Campaign</span></div>
             </div>
           </div>
 
-          <div class="ed-item" onclick="openSerie(6)">
+          <div class="ed-item" onclick="openSerie(2)">
+            <div class="ed-thumb">
+              <img src="images/editorial-04-cover.jpg" alt="Scala Regia Dior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ed-thumb-ph" style="display:none"></div>
+              <div class="ed-hover"><span>Scala Regia × Dior</span></div>
+            </div>
+          </div>
+
+          <div class="ed-item" onclick="openSerie(3)">
             <div class="ed-thumb">
               <img src="images/editorial-07-cover.jpg" alt="The Wild" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
@@ -358,11 +335,19 @@ nav{padding:18px 22px}
             </div>
           </div>
 
-          <div class="ed-item" onclick="openSerie(7)">
+          <div class="ed-item" onclick="openSerie(4)">
             <div class="ed-thumb">
-              <img src="images/editorial-08-cover.jpg" alt="Obsession" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-03-cover.jpg" alt="The Fashionisto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Obsession</span></div>
+              <div class="ed-hover"><span>The Fashionisto</span></div>
+            </div>
+          </div>
+
+          <div class="ed-item" onclick="openSerie(5)">
+            <div class="ed-thumb">
+              <img src="images/editorial-01-cover.jpg" alt="Mojeh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ed-thumb-ph" style="display:none"></div>
+              <div class="ed-hover"><span>Mojeh × Cartier</span></div>
             </div>
           </div>
 
@@ -833,14 +818,12 @@ const galleries={
 };
 
 const series=[
-  {title:'Mojeh × Cartier', imgs:Array.from({length:6},(_,i)=>`images/editorial-01-0${i+1}.jpg`)},
-  {title:'Kissui Campaign', imgs:Array.from({length:5},(_,i)=>`images/editorial-02-0${i+1}.jpg`)},
-  {title:'The Fashionisto', imgs:Array.from({length:4},(_,i)=>`images/editorial-03-0${i+1}.jpg`)},
-  {title:'Scala Regia × Dior', imgs:Array.from({length:11},(_,i)=>`images/editorial-04-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Boycott', imgs:Array.from({length:9},(_,i)=>`images/editorial-05-0${i+1}.jpg`)},
-  {title:'Scala Regia × Chanel', imgs:Array.from({length:7},(_,i)=>`images/editorial-06-0${i+1}.jpg`)},
+  {title:'Kissui Campaign', imgs:Array.from({length:5},(_,i)=>`images/editorial-02-0${i+1}.jpg`)},
+  {title:'Scala Regia × Dior', imgs:Array.from({length:11},(_,i)=>`images/editorial-04-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'The Wild', imgs:Array.from({length:8},(_,i)=>`images/editorial-07-0${i+1}.jpg`)},
-  {title:'Obsession', imgs:Array.from({length:11},(_,i)=>`images/editorial-08-${String(i+1).padStart(2,'0')}.jpg`)}
+  {title:'The Fashionisto', imgs:Array.from({length:4},(_,i)=>`images/editorial-03-0${i+1}.jpg`)},
+  {title:'Mojeh × Cartier', imgs:Array.from({length:6},(_,i)=>`images/editorial-01-0${i+1}.jpg`)}
 ];
 
 const reportageSeries=[
