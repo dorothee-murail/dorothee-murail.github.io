@@ -376,25 +376,25 @@ nav{padding:18px 22px}
 
           <div class="ed-item" onclick="openReportage(0)">
             <div class="ed-thumb ed-landscape">
+              <img src="images/reportage/reportage-03-cover.jpg" alt="Cartier boutique Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ed-thumb-ph" style="display:none"></div>
+              <div class="ed-hover"><span>Cartier Boutique · Japan</span></div>
+            </div>
+          </div>
+
+          <div class="ed-item" onclick="openReportage(1)">
+            <div class="ed-thumb ed-landscape">
               <img src="images/reportage/reportage-01-cover.jpg" alt="Boucheron Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Boucheron · Tokyo</span></div>
             </div>
           </div>
 
-          <div class="ed-item" onclick="openReportage(1)">
-            <div class="ed-thumb ed-landscape">
-              <img src="images/reportage/reportage-02-cover.jpg" alt="Dior Paris" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Dior · Paris</span></div>
-            </div>
-          </div>
-
           <div class="ed-item" onclick="openReportage(2)">
             <div class="ed-thumb ed-landscape">
-              <img src="images/reportage/reportage-03-cover.jpg" alt="Cartier boutique Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-05-cover.jpg" alt="Vera Wang Paris I" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Cartier Boutique · Japan</span></div>
+              <div class="ed-hover"><span>Vera Wang · Paris I</span></div>
             </div>
           </div>
 
@@ -408,9 +408,9 @@ nav{padding:18px 22px}
 
           <div class="ed-item" onclick="openReportage(4)">
             <div class="ed-thumb ed-landscape">
-              <img src="images/reportage/reportage-05-cover.jpg" alt="Vera Wang Paris I" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-02-cover.jpg" alt="Dior Paris" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
-              <div class="ed-hover"><span>Vera Wang · Paris I</span></div>
+              <div class="ed-hover"><span>Dior · Paris</span></div>
             </div>
           </div>
 
@@ -844,11 +844,11 @@ const series=[
 ];
 
 const reportageSeries=[
-  {title:'Boucheron · Tokyo', imgs:Array.from({length:16},(_,i)=>`images/reportage/reportage-01-${String(i+1).padStart(2,'0')}.jpg`)},
-  {title:'Dior · Paris', imgs:Array.from({length:11},(_,i)=>`images/reportage/reportage-02-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Cartier Boutique · Japan', imgs:Array.from({length:8},(_,i)=>`images/reportage/reportage-03-${String(i+1).padStart(2,'0')}.jpg`)},
-  {title:'Cartier Office · Tokyo', imgs:Array.from({length:19},(_,i)=>`images/reportage/reportage-04-${String(i+1).padStart(2,'0')}.jpg`)},
+  {title:'Boucheron · Tokyo', imgs:Array.from({length:16},(_,i)=>`images/reportage/reportage-01-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Vera Wang · Paris I', imgs:Array.from({length:14},(_,i)=>`images/reportage/reportage-05-${String(i+1).padStart(2,'0')}.jpg`)},
+  {title:'Cartier Office · Tokyo', imgs:Array.from({length:19},(_,i)=>`images/reportage/reportage-04-${String(i+1).padStart(2,'0')}.jpg`)},
+  {title:'Dior · Paris', imgs:Array.from({length:11},(_,i)=>`images/reportage/reportage-02-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Vera Wang · Paris II', imgs:Array.from({length:11},(_,i)=>`images/reportage/reportage-06-${String(i+1).padStart(2,'0')}.jpg`)}
 ];
 
