@@ -176,6 +176,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .sol-section-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .sol-section-label:first-child{margin-top:0}
 .sol-works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.sol-works-flow{display:flex;flex-direction:column;align-items:center;gap:56px;margin-bottom:16px}
+.sol-work{margin:0;display:flex;flex-direction:column;align-items:center;max-width:100%}
+.sol-work img{max-width:100%;max-height:78vh;width:auto;height:auto;display:block;object-fit:contain}
+.sol-work figcaption{margin-top:12px;text-align:center}
+.sol-carousel{position:relative;margin:24px 0 16px;overflow:hidden}
+.sol-carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.sol-slide{margin:0;min-width:100%;flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+.sol-slide img{width:100%;max-height:72vh;object-fit:cover;display:block}
+.sol-slide figcaption{margin-top:12px;text-align:center}
+.sol-arrow{position:absolute;top:calc(50% - 30px);transform:translateY(-50%);background:rgba(246,244,240,.85);border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;font-family:var(--sans);font-size:1rem;color:var(--ink);transition:background .2s;display:flex;align-items:center;justify-content:center}
+.sol-arrow:hover{background:var(--bg)}
+.sol-arrow-prev{left:16px}
+.sol-arrow-next{right:16px}
+.sol-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.sol-dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s;border:none;padding:0}
+.sol-dot.active{background:var(--mid)}
 .sol-views-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
 .sol-item{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
 .sol-thumb{width:100%;aspect-ratio:4/3;overflow:hidden;background:#e2dfd9}
@@ -648,15 +664,15 @@ nav{padding:18px 22px}
 <div id="research" class="page">
   <div class="research-inner">
     <div class="eye-intro fade">
-      <p>Seven years before the projects existed,<br>there were already images — hybrid bodies,<br>sick spaces, beings at the edge of something.<br>Eye is where projects begin before they have a name.</p>
+      <p>Eye is where the looking happens. A space for the work that comes before the work: the images I collect, the artists I follow, the exhibitions I build. Some of it becomes a project years later. Some of it stays here, a record of what holds my attention and why.</p>
     </div>
     <div class="eye-project fade">
       <p class="eye-kicker">Curation · Tokyo · 2025</p>
       <h2 class="eye-title">Shape of Light<br><em>Lin Syouki</em></h2>
-      <p class="eye-subtitle">KURA, Shibuya — May 2025</p>
-      <p class="eye-body">The first time I saw Lin's work, something became immediately clear: it wasn't an effect. It was the very principle of the piece. The gaze doesn't discover the image — <em>it produces it.</em></p>
-      <p class="eye-body">Lin works reflective fabric as a living material: crumpling it, stretching it, fixing it. What results doesn't quite exist at a distance. You have to move to see it. You have to be there.</p>
-      <p class="eye-body">My intention was not to hang paintings, but to construct the conditions of an experience. Six years in Japan changed the way I compose space: emptiness is not an absence — it is a material.</p>
+      <p class="eye-subtitle">KURA, Shibuya ・ May 2025</p>
+      <p class="eye-body">I saw Lin's work before I understood it, which is exactly what made me want to show it. The pieces don't resolve from a distance. The reflective surface shifts as you move, so the image you see is one you partly make yourself. Stand still and it closes. Step sideways and it opens again.</p>
+      <p class="eye-body">Curating the show meant building for that. Not hanging objects on walls, but shaping a space where the work could do what it does: ask the viewer to move, to be present, to complete the picture. Six years in Japan taught me to treat emptiness as material rather than absence, and that is the principle the exhibition was built on.</p>
+      <p class="eye-body">Shape of Light was Lin Syouki's first solo exhibition. Eighteen works, shown at KURA in Shibuya, May 2025.</p>
       <div class="stats-row">
         <div class="stat"><span class="stat-n">18</span><span class="stat-l">works</span></div>
         <div class="stat"><span class="stat-n">4</span><span class="stat-l">sold</span></div>
@@ -666,59 +682,59 @@ nav{padding:18px 22px}
       <!-- GALERIE SHAPE OF LIGHT -->
       <div class="sol-gallery">
 
-        <!-- Œuvres -->
+        <!-- Œuvres — flux respectant les formats natifs -->
         <div class="sol-section-label">Works</div>
-        <div class="sol-works-grid">
-          <div class="sol-item">
-            <div class="sol-thumb"><img src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Lin Syouki, 202407S</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb"><img src="images/shape-02.jpg" alt="Lin Syouki 202409S" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Lin Syouki, 202409S</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb"><img src="images/shape-03.jpg" alt="Lin Syouki 202407L" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Lin Syouki, 202407L</p>
-          </div>
+        <div class="sol-works-flow">
+          <figure class="sol-work">
+            <img src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <figcaption class="sol-caption">Lin Syouki, 202407S</figcaption>
+          </figure>
+          <figure class="sol-work">
+            <img src="images/shape-02.jpg" alt="Lin Syouki 202409S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <figcaption class="sol-caption">Lin Syouki, 202409S</figcaption>
+          </figure>
+          <figure class="sol-work">
+            <img src="images/shape-03.jpg" alt="Lin Syouki 202407L" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <figcaption class="sol-caption">Lin Syouki, 202407L</figcaption>
+          </figure>
         </div>
 
-        <!-- Install + Exhibition -->
-        <div class="sol-section-label">Exhibition views</div>
-        <div class="sol-views-grid">
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-04.jpg" alt="Install view" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Install view</p>
+        <!-- Exhibition — carrousel pleine largeur -->
+        <div class="sol-section-label">The Exhibition</div>
+        <div class="sol-carousel">
+          <div class="sol-carousel-track" id="sol-track">
+            <figure class="sol-slide">
+              <img src="images/shape-04.jpg" alt="Install view" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Install view</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-05.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-06.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-07.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-08.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-09.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-10.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
+            </figure>
           </div>
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-05.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-06.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-07.jpg" alt="Exhibition" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Exhibition · Lin Syouki, 2025</p>
-          </div>
-        </div>
-
-        <!-- Opening -->
-        <div class="sol-section-label">Opening night</div>
-        <div class="sol-views-grid">
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-08.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-09.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
-          </div>
-          <div class="sol-item">
-            <div class="sol-thumb sol-landscape"><img src="images/shape-10.jpg" alt="Opening" onerror="this.parentElement.style.background='#e2dfd9'"></div>
-            <p class="sol-caption">Opening · KURA Gallery, Tokyo-Shibuya, May 2025</p>
-          </div>
+          <button class="sol-arrow sol-arrow-prev" onclick="solSlide(-1)" aria-label="Previous">←</button>
+          <button class="sol-arrow sol-arrow-next" onclick="solSlide(1)" aria-label="Next">→</button>
+          <div class="sol-dots" id="sol-dots"></div>
         </div>
 
       </div>
@@ -735,8 +751,8 @@ nav{padding:18px 22px}
     <div class="eye-project fade">
       <p class="eye-kicker">Visual Archive · Ongoing</p>
       <h2 class="eye-title">Seven Years<br><em>of Looking</em></h2>
-      <p class="eye-subtitle">References, intuitions, obsessions — 2018–2025</p>
-      <p class="eye-placeholder">An edited selection of images, fragments and references built since 2018. Not a blog — an archive of what always precedes the work. Coming soon.</p>
+      <p class="eye-subtitle">References, intuitions, obsessions ・ 2018–2025</p>
+      <p class="eye-placeholder">An edited selection of images, fragments and references built since 2018. Not a blog, but an archive of what always precedes the work. Coming soon.</p>
     </div>
   </div>
 </div>
@@ -899,6 +915,37 @@ function moveLightbox(dir){currentIndex=(currentIndex+dir+currentGallery.length)
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 function closeLightboxOutside(e){if(e.target===document.getElementById('lightbox'))closeLightbox()}
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='ArrowRight')moveLightbox(1);if(e.key==='ArrowLeft')moveLightbox(-1);if(e.key==='Escape')closeLightbox()});
+
+// CARROUSEL SHAPE OF LIGHT
+let solIndex=0;
+function solInitDots(){
+  const track=document.getElementById('sol-track');
+  const dots=document.getElementById('sol-dots');
+  if(!track||!dots)return;
+  const n=track.children.length;
+  dots.innerHTML='';
+  for(let i=0;i<n;i++){
+    const b=document.createElement('button');
+    b.className='sol-dot'+(i===0?' active':'');
+    b.onclick=()=>solGoTo(i);
+    dots.appendChild(b);
+  }
+}
+function solUpdate(){
+  const track=document.getElementById('sol-track');
+  if(!track)return;
+  track.style.transform=`translateX(-${solIndex*100}%)`;
+  document.querySelectorAll('.sol-dot').forEach((d,i)=>d.classList.toggle('active',i===solIndex));
+}
+function solSlide(dir){
+  const track=document.getElementById('sol-track');
+  if(!track)return;
+  const n=track.children.length;
+  solIndex=(solIndex+dir+n)%n;
+  solUpdate();
+}
+function solGoTo(i){solIndex=i;solUpdate()}
+solInitDots();
 </script>
 </body>
 </html>
