@@ -177,9 +177,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .sol-section-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .sol-section-label:first-child{margin-top:0}
 .sol-works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.sol-works-flow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:32px;margin-bottom:16px}
-.sol-work{margin:0;display:flex;flex-direction:column;align-items:center;flex:1 1 0;min-width:240px;max-width:500px}
-.sol-work img{max-width:100%;max-height:56vh;width:auto;height:auto;display:block;object-fit:contain}
+.sol-works-flow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;margin-bottom:16px}
+.sol-work{margin:0;display:flex;flex-direction:column;align-items:center;flex:0 1 auto;max-width:100%}
+.sol-work img{height:360px;width:auto;max-width:100%;display:block;object-fit:contain}
 .sol-work figcaption{margin-top:12px;text-align:center}
 .sol-carousel{position:relative;margin:24px 0 16px;overflow:hidden}
 .sol-carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
@@ -714,7 +714,7 @@ nav{padding:18px 22px}
         <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening night</span></div>
       </div>
       <div class="sol-gallery fade">
-        <div class="sol-section-label">Work</div>
+        <div class="sol-section-label">Artwork</div>
         <div class="sol-works-flow">
           <figure class="sol-work">
             <img src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
@@ -760,6 +760,17 @@ nav{padding:18px 22px}
           <button class="sol-arrow sol-arrow-prev" onclick="solSlide(-1)" aria-label="Previous">←</button>
           <button class="sol-arrow sol-arrow-next" onclick="solSlide(1)" aria-label="Next">→</button>
           <div class="sol-dots" id="sol-dots"></div>
+        </div>
+        <div class="sol-section-label">Invitation</div>
+        <div class="sol-works-flow">
+          <figure class="sol-work">
+            <img src="images/shape-flyer-1.jpg" alt="Invitation recto" style="cursor:pointer" onclick="openLightbox('invitation',0)" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <figcaption class="sol-caption">Recto</figcaption>
+          </figure>
+          <figure class="sol-work">
+            <img src="images/shape-flyer-2.jpg" alt="Invitation verso" style="cursor:pointer" onclick="openLightbox('invitation',1)" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <figcaption class="sol-caption">Verso</figcaption>
+          </figure>
         </div>
       </div>
       <div class="press-block">
@@ -866,7 +877,8 @@ function showProject(id){
 }
 
 const galleries={
-  reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg']
+  reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg'],
+  invitation:['images/shape-flyer-1.jpg','images/shape-flyer-2.jpg']
 };
 
 const series=[
