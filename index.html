@@ -29,6 +29,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 
 /* WORK */
 #work{padding:110px 52px 100px}
+#commissions{padding:110px 52px 100px}
 .work-inner{max-width:1060px;margin:0 auto}
 .work-tabs{display:flex;gap:0;margin-bottom:64px;border-bottom:1px solid var(--line)}
 .work-tab{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:300;padding:0 0 14px 0;margin-right:40px;cursor:pointer;color:var(--mid);border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .2s}
@@ -230,7 +231,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 @media(max-width:720px){
 nav{padding:18px 22px}
 .nav-links{gap:18px}
-#work,#research,#about,#contact,#project-page{padding:96px 22px 80px}
+#work,#commissions,#research,#about,#contact,#project-page{padding:96px 22px 80px}
 .projects-grid{grid-template-columns:1fr;row-gap:0}
 .project-item:nth-child(even){margin-top:0}
 .photo-grid{grid-template-columns:repeat(2,1fr)}
@@ -252,7 +253,7 @@ nav{padding:18px 22px}
   <span class="nav-name" onclick="show('home')">Dorothée Murail</span>
   <ul class="nav-links">
     <li><a id="n-work" onclick="show('work')">Work</a></li>
-    <li><a id="n-research" onclick="show('research')">Eye</a></li>
+    <li><a id="n-commissions" onclick="show('commissions')">Commissions</a></li>
     <li><a id="n-about" onclick="show('about')">About</a></li>
     <li><a id="n-contact" onclick="show('contact')">Contact</a></li>
   </ul>
@@ -267,15 +268,19 @@ nav{padding:18px 22px}
 <!-- WORK -->
 <div id="work" class="page">
   <div class="work-inner">
-    <div class="work-tabs">
-      <div class="work-tab active" onclick="tab(this,'panel-projets')">Projects</div>
-      <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
-      <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
-    </div>
+    <div class="projects-grid fade">
 
-    <!-- PROJECTS -->
-    <div id="panel-projets" class="work-panel active fade">
-      <div class="projects-grid">
+        <div class="project-item" onclick="showProject('shapeoflight')">
+          <div class="project-thumb">
+            <img src="images/shape-05.jpg" alt="Shape of Light" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="project-thumb-ph" style="display:none">Image</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-title">Shape of Light</span>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-caption">Curation ・ Lin Syouki ・ KURA Gallery, Tokyo</p>
+        </div>
 
         <div class="project-item" onclick="showProject('aka')">
           <div class="project-thumb">
@@ -284,9 +289,9 @@ nav{padding:18px 22px}
           </div>
           <div class="project-meta">
             <span class="project-title">AKA</span>
-            <span class="project-year">2020</span>
+            <span class="project-year">2020-2022</span>
           </div>
-          <p class="project-caption">Short Film — Centre Pompidou, 8 international festivals</p>
+          <p class="project-caption">Short Film ・ Centre Pompidou, 8 international festivals</p>
         </div>
 
         <div class="project-item" onclick="showProject('redscale')">
@@ -298,7 +303,7 @@ nav{padding:18px 22px}
             <span class="project-title">Red Scale</span>
             <span class="project-year">2021</span>
           </div>
-          <p class="project-caption">Film photography — Sankai Juku, Butoh, Tokyo</p>
+          <p class="project-caption">Film photography ・ Sankai Juku, Butoh, Tokyo</p>
         </div>
 
         <div class="project-item" onclick="showProject('inbetween')">
@@ -308,12 +313,21 @@ nav{padding:18px 22px}
           </div>
           <div class="project-meta">
             <span class="project-title">In Between</span>
-            <span class="project-year">2020</span>
+            <span class="project-year">2018</span>
           </div>
-          <p class="project-caption">Film photography — interstices, floating spaces</p>
+          <p class="project-caption">Film photography ・ interstices, floating spaces</p>
         </div>
 
       </div>
+  </div>
+</div>
+
+<!-- COMMISSIONS -->
+<div id="commissions" class="page">
+  <div class="work-inner">
+    <div class="work-tabs">
+      <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
+      <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
     </div>
 
     <!-- PHOTO -->
@@ -482,7 +496,7 @@ nav{padding:18px 22px}
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">Ashitaka & San</p>
-            <p class="video-caption">Joe Hisaishi — Princess Mononoke</p>
+            <p class="video-caption">Joe Hisaishi (Princess Mononoke) ・ Universal Music</p>
           </div>
 
           <div class="video-item" onclick="openVideo('youtube','cXoVLrJ4EGE')">
@@ -492,7 +506,7 @@ nav{padding:18px 22px}
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">Bleu</p>
-            <p class="video-caption">Blondino</p>
+            <p class="video-caption">Blondino ・ independent artist</p>
           </div>
 
           <div class="video-item" onclick="openVideo('youtube','E9n227IwOIg')">
@@ -502,7 +516,7 @@ nav{padding:18px 22px}
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">OK ou KO</p>
-            <p class="video-caption">Emmy Liyana</p>
+            <p class="video-caption">Emmy Liyana ・ Warner Music Group</p>
           </div>
 
         </div>
@@ -520,7 +534,7 @@ nav{padding:18px 22px}
 
     <!-- AKA -->
     <div id="pp-aka" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Short Film · 2020</p>
+      <p class="pp-kicker fade">Short Film · 2020-2022</p>
       <h1 class="pp-title fade">AKA <span class="pp-title-jp">赤</span></h1>
       <p class="pp-subtitle fade">Dorothée Murail ・ Paris / Tokyo</p>
       <div class="pp-hero fade">
@@ -629,7 +643,7 @@ nav{padding:18px 22px}
 
     <!-- IN BETWEEN -->
     <div id="pp-inbetween" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Film Photography · 2020</p>
+      <p class="pp-kicker fade">Film Photography · 2018</p>
       <h1 class="pp-title fade">In Between</h1>
       <p class="pp-subtitle fade">Film photography</p>
       <div class="pp-hero fade">
@@ -649,7 +663,7 @@ nav{padding:18px 22px}
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Year</p>
-            <p class="pp-meta-value">2020</p>
+            <p class="pp-meta-value">2018</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Locations</p>
@@ -659,32 +673,47 @@ nav{padding:18px 22px}
       </div>
     </div>
 
-  </div>
-</div>
-
-<!-- EYE -->
-<div id="research" class="page">
-  <div class="research-inner">
-    <div class="eye-intro fade">
-      <p>Eye is where the looking happens. A space for the work that comes before the work: the images I collect, the artists I follow, the exhibitions I build. Some of it becomes a project years later. Some of it stays here, a record of what holds my attention and why.</p>
-    </div>
-    <div class="eye-project fade">
-      <p class="eye-kicker">Curation · Tokyo · 2025</p>
-      <h2 class="eye-title">Shape of Light<br><em>Lin Syouki</em></h2>
-      <p class="eye-subtitle">KURA, Shibuya ・ May 2025</p>
-      <p class="eye-body">I saw Lin's work before I understood it, which is exactly what made me want to show it. The pieces don't resolve from a distance. The reflective surface shifts as you move, so the image you see is one you partly make yourself. Stand still and it closes. Step sideways and it opens again.</p>
-      <p class="eye-body">Curating the show meant building for that. Not hanging objects on walls, but shaping a space where the work could do what it does: ask the viewer to move, to be present, to complete the picture. Six years in Japan taught me to treat emptiness as material rather than absence, and that is the principle the exhibition was built on.</p>
-      <p class="eye-body">Shape of Light was Lin Syouki's first solo exhibition. Eighteen works, shown at KURA in Shibuya, May 2025.</p>
+    <!-- SHAPE OF LIGHT -->
+    <div id="pp-shapeoflight" class="pp-content" style="display:none">
+      <p class="pp-kicker fade">Curation · 2025</p>
+      <h1 class="pp-title fade">Shape of Light</h1>
+      <p class="pp-subtitle fade">Lin Syouki ・ KURA Gallery, Tokyo-Shibuya ・ May 2025</p>
+      <div class="pp-body-grid fade">
+        <div class="pp-text">
+          <p>I saw Lin's work before I understood it, which is exactly what made me want to show it. The pieces don't resolve from a distance. The reflective surface shifts as you move, so the image you see is one you partly make yourself. Stand still and it closes. Step sideways and it opens again.</p>
+          <p>Curating the show meant building for that. Not hanging objects on walls, but shaping a space where the work could do what it does: ask the viewer to move, to be present, to complete the picture. Six years in Japan taught me to treat emptiness as material rather than absence, and that is the principle the exhibition was built on.</p>
+          <p>Shape of Light was Lin Syouki's first solo exhibition.</p>
+        </div>
+        <div class="pp-meta-block">
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Role</p>
+            <p class="pp-meta-value">Curator</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Artist</p>
+            <p class="pp-meta-value">Lin Syouki</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Venue</p>
+            <p class="pp-meta-value">KURA Gallery<br>Tokyo-Shibuya</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Date</p>
+            <p class="pp-meta-value">May 2025</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Works</p>
+            <p class="pp-meta-value">18 works ・ 4 sold</p>
+          </div>
+        </div>
+      </div>
       <div class="stats-row">
         <div class="stat"><span class="stat-n">18</span><span class="stat-l">works</span></div>
         <div class="stat"><span class="stat-n">4</span><span class="stat-l">sold</span></div>
         <div class="stat"><span class="stat-n">22%</span><span class="stat-l">sales rate</span></div>
         <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening night</span></div>
       </div>
-      <!-- GALERIE SHAPE OF LIGHT -->
-      <div class="sol-gallery">
-
-        <!-- Œuvres — flux respectant les formats natifs -->
+      <div class="sol-gallery fade">
         <div class="sol-section-label">Work</div>
         <div class="sol-works-flow">
           <figure class="sol-work">
@@ -696,8 +725,6 @@ nav{padding:18px 22px}
             <figcaption class="sol-caption">One work, three viewpoints ・ Lin Syouki, 202409S</figcaption>
           </figure>
         </div>
-
-        <!-- Exhibition — carrousel pleine largeur -->
         <div class="sol-section-label">The Exhibition</div>
         <div class="sol-carousel">
           <div class="sol-carousel-track" id="sol-track">
@@ -734,9 +761,7 @@ nav{padding:18px 22px}
           <button class="sol-arrow sol-arrow-next" onclick="solSlide(1)" aria-label="Next">→</button>
           <div class="sol-dots" id="sol-dots"></div>
         </div>
-
       </div>
-
       <div class="press-block">
         <p class="press-l">Press</p>
         <div class="press-links">
@@ -746,12 +771,7 @@ nav{padding:18px 22px}
         </div>
       </div>
     </div>
-    <div class="eye-project fade">
-      <p class="eye-kicker">Visual Archive</p>
-      <h2 class="eye-title">Eight Years<br><em>of Looking</em></h2>
-      <p class="eye-subtitle">A journal of images ・ since 2018</p>
-      <p class="eye-placeholder">References, intuitions, obsessions gathered since 2018.</p>
-    </div>
+
   </div>
 </div>
 
@@ -765,9 +785,9 @@ nav{padding:18px 22px}
     <div class="about-col">
       <h1 class="about-name">Dorothée<br>Murail</h1>
       <p class="about-bio">
-        An image-maker whose work explores thresholds — between cultures, between states, between what shows itself and what resists being seen.<br><br>
-        Trained at La Cambre and Les Gobelins, she has developed over ten years a practice that crosses photography, cinema and visual research. Her personal projects — rooted in cultural tensions and interstitial spaces — have been presented at Centre Pompidou and Nuit Blanche Kyoto.<br><br>
-        In parallel, she collaborates with leading houses and institutions — Cartier, Dior, Vogue — on projects where the image is at stake. Her curatorial work, born from a visual archive built over several years, extends the same posture: not to classify the world in images, but to reveal its frictions.
+        An image-maker whose work explores thresholds: between cultures, between states, between what shows itself and what resists being seen.<br><br>
+        Trained at La Cambre and Les Gobelins, she has developed over ten years a practice that crosses photography, cinema and visual research. Her personal projects, rooted in cultural tensions and interstitial spaces, have been presented at Centre Pompidou and Nuit Blanche Kyoto. Beneath the finished work runs a constant practice of looking, the research that precedes and feeds every project.<br><br>
+        In parallel, she collaborates with leading houses and institutions, among them Cartier, Dior and Vogue, on projects where the image is at stake. Her curatorial work, born from a visual archive built over several years, extends the same posture: not to classify the world in images, but to reveal its frictions.
       </p>
       <p class="about-ref-label">Selected collaborations</p>
       <div class="about-refs">
@@ -809,7 +829,7 @@ nav{padding:18px 22px}
 </div>
 
 <script>
-const pages=['home','work','project-page','research','about','contact'];
+const pages=['home','work','commissions','project-page','about','contact'];
 function show(id){
   pages.forEach(p=>{
     const el=document.getElementById(p);
@@ -823,6 +843,11 @@ function show(id){
   if(n)n.classList.add('active');
   // keep Work nav active when on project page
   if(id==='project-page'){const nw=document.getElementById('n-work');if(nw)nw.classList.add('active')}
+  // commissions opens on the tab choice, no panel shown until clicked
+  if(id==='commissions'){
+    document.querySelectorAll('#commissions .work-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('#commissions .work-panel').forEach(p=>p.classList.remove('active'));
+  }
 }
 
 function tab(el,panelId){
