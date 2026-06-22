@@ -114,6 +114,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .pp-gallery-item:hover img{opacity:.85}
 .pp-gallery-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
 .pp-instagram{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.pp-credits-bottom{display:flex;flex-wrap:wrap;gap:44px;margin-top:30px}
 .pp-credit{font-size:.92rem;color:var(--mid);margin-top:10px}
 .pp-instagram a{font-family:var(--serif);font-size:.92rem;font-style:italic;color:var(--mid);text-decoration:none;transition:color .2s}
 .pp-instagram a:hover{color:var(--ink)}
@@ -272,7 +273,7 @@ nav{padding:18px 22px}
 
         <div class="project-item" onclick="showProject('shapeoflight')">
           <div class="project-thumb">
-            <img src="images/shape-05.jpg" alt="Shape of Light" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/shape-cover.jpg" alt="Shape of Light" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="project-thumb-ph" style="display:none">Image</div>
           </div>
           <div class="project-meta">
@@ -557,24 +558,12 @@ nav{padding:18px 22px}
             <p class="pp-meta-value">Filmed 2019 ・ Released 2020</p>
           </div>
           <div class="pp-meta-row">
-            <p class="pp-meta-label">With</p>
-            <p class="pp-meta-value">Sachiko Ishikawa ・ Compagnie Mā</p>
-          </div>
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Cinematography</p>
-            <p class="pp-meta-value">Quentin Devillers</p>
-          </div>
-          <div class="pp-meta-row">
             <p class="pp-meta-label">Awards</p>
             <p class="pp-meta-value">Jury Prize<br>Signs of the Night, Portugal 2021</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Presented at</p>
             <p class="pp-meta-value">Centre Pompidou, Paris<br>Nuit Blanche Kyoto ・ solo show<br>8 international festivals</p>
-          </div>
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Production</p>
-            <p class="pp-meta-value">Azadi Production<br>co-production One Day</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Supported by</p>
@@ -601,7 +590,21 @@ nav{padding:18px 22px}
         </div>
       </div>
       <div class="pp-instagram fade">
-        <a href="https://www.instagram.com/aka_artproject/" target="_blank">@aka_artproject →</a>
+        <a href="https://www.instagram.com/aka_artproject/" target="_blank">→ @aka_artproject</a>
+      </div>
+      <div class="pp-credits-bottom fade">
+        <div>
+          <p class="pp-meta-label">With</p>
+          <p class="pp-meta-value">Sachiko Ishikawa ・ Compagnie Mā</p>
+        </div>
+        <div>
+          <p class="pp-meta-label">Cinematography</p>
+          <p class="pp-meta-value">Quentin Devillers</p>
+        </div>
+        <div>
+          <p class="pp-meta-label">Production</p>
+          <p class="pp-meta-value">Azadi Production ・ co-production One Day</p>
+        </div>
       </div>
     </div>
 
@@ -756,21 +759,18 @@ nav{padding:18px 22px}
               <img src="images/shape-10.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
               <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
             </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-flyer-1.jpg" alt="Invitation recto" style="cursor:pointer" onclick="openLightbox('invitation',0)" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Invitation ・ recto</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-flyer-2.jpg" alt="Invitation verso" style="cursor:pointer" onclick="openLightbox('invitation',1)" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Invitation ・ verso</figcaption>
+            </figure>
           </div>
           <button class="sol-arrow sol-arrow-prev" onclick="solSlide(-1)" aria-label="Previous">←</button>
           <button class="sol-arrow sol-arrow-next" onclick="solSlide(1)" aria-label="Next">→</button>
           <div class="sol-dots" id="sol-dots"></div>
-        </div>
-        <div class="sol-section-label">Invitation</div>
-        <div class="sol-works-flow">
-          <figure class="sol-work">
-            <img src="images/shape-flyer-1.jpg" alt="Invitation recto" style="cursor:pointer" onclick="openLightbox('invitation',0)" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
-            <figcaption class="sol-caption">Recto</figcaption>
-          </figure>
-          <figure class="sol-work">
-            <img src="images/shape-flyer-2.jpg" alt="Invitation verso" style="cursor:pointer" onclick="openLightbox('invitation',1)" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
-            <figcaption class="sol-caption">Verso</figcaption>
-          </figure>
         </div>
       </div>
       <div class="press-block">
