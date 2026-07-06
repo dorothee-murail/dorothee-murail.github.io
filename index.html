@@ -656,10 +656,11 @@ nav{padding:18px 22px}
       <p class="pp-kicker fade">Analogue Photography · 2018</p>
       <h1 class="pp-title fade">In Between</h1>
       <p class="pp-subtitle fade">Analogue photography</p>
-      <div class="pp-hero fade">
-        <img src="images/projects/inbetween-hero.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="pp-hero fade pp-hero-clickable" style="aspect-ratio:auto;margin-bottom:12px">
+        <img src="images/projects/inbetween-01.jpg" alt="In Between" style="cursor:pointer;height:auto" onclick="openLightbox('inbetween',0)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="pp-hero-ph" style="display:none">Image</div>
       </div>
+      <p class="pp-hero-hint fade" onclick="openLightbox('inbetween',0)">→ click to view the series, 16 images</p>
       <div class="pp-body-grid fade">
         <div class="pp-text">
           <p><em>In Between</em> is built in pairs. Two images placed side by side, holding a single emotion between them, or one image strong enough to carry that suspension alone. The work lives in the gap, the space the eye crosses from one frame to the other.</p>
@@ -886,7 +887,8 @@ function showProject(id){
 const galleries={
   reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg'],
   invitation:['images/shape-flyer-1.jpg','images/shape-flyer-2.jpg'],
-  redscale:['images/projects/redscale-01.jpg','images/projects/redscale-02.jpg','images/projects/redscale-03.jpg','images/projects/redscale-04.jpg','images/projects/redscale-05.jpg','images/projects/redscale-06.jpg','images/projects/redscale-07.jpg','images/projects/redscale-08.jpg']
+  redscale:['images/projects/redscale-01.jpg','images/projects/redscale-02.jpg','images/projects/redscale-03.jpg','images/projects/redscale-04.jpg','images/projects/redscale-05.jpg','images/projects/redscale-06.jpg','images/projects/redscale-07.jpg','images/projects/redscale-08.jpg'],
+  inbetween:['images/projects/inbetween-01.jpg','images/projects/inbetween-02.jpg','images/projects/inbetween-03.jpg','images/projects/inbetween-04.jpg','images/projects/inbetween-05.jpg','images/projects/inbetween-06.jpg','images/projects/inbetween-07.jpg','images/projects/inbetween-08.jpg','images/projects/inbetween-09.jpg','images/projects/inbetween-10.jpg','images/projects/inbetween-11.jpg','images/projects/inbetween-12.jpg','images/projects/inbetween-13.jpg','images/projects/inbetween-14.jpg','images/projects/inbetween-15.jpg','images/projects/inbetween-16.jpg']
 };
 
 const series=[
