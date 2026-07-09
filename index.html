@@ -119,7 +119,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .pp-gallery-item:hover img{opacity:.85}
 .pp-gallery-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
 .pp-instagram{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
-.pp-credits-bottom{display:flex;flex-wrap:wrap;gap:44px;margin-top:30px}
+.pp-credits-bottom{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:40px;margin-top:30px}
+.pp-credits-bottom>div{flex:1 1 0;min-width:0}
 .pp-credit{font-size:.92rem;color:var(--mid);margin-top:10px}
 .pp-instagram a{font-family:var(--serif);font-size:.92rem;font-style:italic;color:var(--mid);text-decoration:none;transition:color .2s}
 .pp-instagram a:hover{color:var(--ink)}
@@ -249,7 +250,9 @@ nav{padding:18px 22px}
 .pp-body-grid{grid-template-columns:1fr}
 .pp-gallery{grid-template-columns:1fr}
 .sol-works-flow{flex-direction:column;align-items:center;gap:40px}
-.sol-work{max-width:100%}}
+.sol-work{max-width:100%}
+.pp-credits-bottom{flex-wrap:wrap;gap:28px}
+.pp-credits-bottom>div{flex:1 1 40%}}
 </style>
 </head>
 <body>
@@ -596,7 +599,7 @@ nav{padding:18px 22px}
       <div class="pp-credits-bottom fade">
         <div>
           <p class="pp-meta-label">With</p>
-          <p class="pp-meta-value">Sachiko Ishikawa ・ Compagnie Mā</p>
+          <p class="pp-meta-value">Sachiko Ishikawa<br>Compagnie Mā</p>
         </div>
         <div>
           <p class="pp-meta-label">Cinematography</p>
@@ -604,11 +607,11 @@ nav{padding:18px 22px}
         </div>
         <div>
           <p class="pp-meta-label">Production</p>
-          <p class="pp-meta-value">Azadi Production ・ co-production One Day</p>
+          <p class="pp-meta-value">Azadi Production<br>co-production One Day</p>
         </div>
         <div>
           <p class="pp-meta-label">Supported by</p>
-          <p class="pp-meta-value">Fonds pour les Talents Émergents ・ Île-de-France</p>
+          <p class="pp-meta-value">Fonds pour les Talents Émergents<br>Île-de-France</p>
         </div>
       </div>
     </div>
@@ -655,8 +658,8 @@ nav{padding:18px 22px}
       <p class="pp-kicker fade">Analogue Photography · since 2018</p>
       <h1 class="pp-title fade">In Between</h1>
       <p class="pp-subtitle fade">Analogue photography</p>
-      <div class="pp-hero fade pp-hero-clickable" style="aspect-ratio:auto;margin-bottom:12px">
-        <img src="images/projects/inbetween-hero.jpg" alt="In Between" style="cursor:pointer;height:auto" onclick="openLightbox('inbetween',0)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="pp-hero fade pp-hero-clickable" style="aspect-ratio:auto;height:auto;line-height:0;margin-bottom:12px">
+        <img src="images/projects/inbetween-hero.jpg" alt="In Between" style="cursor:pointer;height:auto;display:block;object-fit:contain" onclick="openLightbox('inbetween',0)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="pp-hero-ph" style="display:none">Image</div>
       </div>
       <p class="pp-hero-hint fade" onclick="openLightbox('inbetween',0)">→ click to view the series, 16 images</p>
