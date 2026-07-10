@@ -1,175 +1,3 @@
-
-/
-Claude a terminé la réponse.
-mince j'ai fait la manip mais jai appuyer sur remove avant de faire letape 4
-
-Pas de panique, ce n'est pas grave du tout. Tu es même dans une situation propre.
-
-Ce que Remove a fait : GitHub a retiré ton domaine et supprimé le fichier CNAME de ton dépôt. Il n'a touché ni à ton DNS chez LWS, ni à ton index.html, ni à tes images. Ton DNS était vert, il l'est toujours.
-
-Et il y a une ironie utile : tu voulais forcer GitHub à repartir de zéro sur le certificat. Remove fait exactement ça, en plus radical. C'est presque le résultat recherché.
-
-Reprends simplement ici
-Sur cette même page, dans le champ Custom domain, tape :
-www.dorothee-murail.com
-Clique sur Save.
-Attends. Compte 20 à 30 minutes, parfois jusqu'à une heure.
-C'est tout. Ne fais rien d'autre, ne recolle rien, ne retouche pas LWS.
-
-Ce qui va se passer
-GitHub va recréer le fichier CNAME dans ton dépôt (tu le verras réapparaître à côté d'index.html). Puis il va vérifier ton DNS — qui est bon — et demander un certificat. Cette fois, la demande part avec un DNS déjà correct, ce qui était tout le problème.
-
-Comment vérifier
-Recharge la page Settings → Pages de temps en temps :
-
-Tu dois d'abord revoir ✓ DNS check successful
-Puis, plus tard, la ligne Enforce HTTPS cesse d'être grisée
-Quand la case devient cochable, coche-la. Ton site sera alors accessible en https://www.dorothee-murail.com avec le cadenas.
-
-Un mot pour la suite : quand ton navigateur affichera enfin le site, il se peut qu'il te ressorte l'avertissement de sécurité par réflexe (il a mémorisé l'échec). Teste alors depuis ton téléphone en 4G, ou en navigation privée. C'est le test propre.
-
-Dis-moi quand la case Enforce HTTPS devient cliquable. Et si dans une heure elle est toujours grise, reviens vers moi, on regardera la piste du CAA.
-
-la case est cliquable
-
-Le certificat a été émis. La manœuvre a marché.
-
-Coche la case Enforce HTTPS. C'est le dernier geste.
-
-Puis attends encore quelques minutes (GitHub redéploie), et teste :
-
-https://www.dorothee-murail.com
-
-Fais ce test depuis ton téléphone en 4G (Wi-Fi coupé), ou dans une fenêtre de navigation privée. Ton ordinateur a mémorisé l'échec de sécurité d'hier et risque de te rejouer l'avertissement même si tout est réparé. Ce serait une fausse alerte.
-
-Si ton ordinateur persiste à afficher l'avertissement alors que le téléphone affiche bien le site : dans Safari, va dans Réglages → Confidentialité → Gérer les données de sites web → cherche dorothee-murail → Supprimer. Ferme Safari complètement, rouvre.
-
-Une fois que tu vois le site avec le cadenas, ce qu'il te reste :
-
-Ne résilie Squarespace que maintenant, et laisse passer quelques jours pour être sûre.
-
-Vérifie que dorothee-murail.com (sans www) redirige bien vers www.dorothee-murail.com. Grâce aux quatre lignes A que tu as ajoutées, GitHub crée la redirection automatiquement.
-
-Le fichier CNAME est revenu dans ton dépôt. Ne le supprime jamais. Quand tu recolleras une version de ton index.html, tu ne touches qu'à index.html — ce sont deux fichiers distincts.
-
-Et il reste le point en suspens : ta zone DNS montre une infrastructure email complète chez LWS, donc contact@dorothee-murail.com fonctionne probablement. Le site affiche pour l'instant le Gmail, ce qui contredit ta décision de départ. Teste l'adresse pro, et si elle marche, dis-le-moi : je la remets sur le site en une ligne.
-
-Dis-moi si le site s'affiche.
-
-le site saffiche cest bon! 
-
-dois je supprimer mon site squarspace et comment? 
-
-aussi , j'aimerai travailler sur le SEO et la social image de mon nouveau site _ et si tu pense a d'autres choses de ce type?-
-
-Bravo, le site est en ligne sur ton domaine, en HTTPS.
-
-Squarespace : oui, mais pas tout de suite
-Attends une semaine. Rien ne presse, et il y a un piège que je préfère te signaler avant.
-
-Le vrai risque, ce n'est pas le site, c'est le mail et le domaine. Ton domaine est chez LWS, donc pas de danger de ce côté. Mais vérifie que rien d'autre ne dépendait de Squarespace : une boutique, un formulaire, une newsletter, une adresse email gérée par eux. D'après ta zone DNS, tes emails sont chez LWS, donc a priori tu es tranquille.
-
-Comment faire, dans l'ordre :
-
-Récupère ce que tu veux garder : télécharge tes images en haute résolution, exporte tes textes. Une fois l'abonnement fini, tu n'y as plus accès.
-Ne « supprime » pas le site : il suffit de ne pas renouveler. Dans ton compte Squarespace → Settings → Billing → Subscriptions → Cancel subscription (ou « Annuler le renouvellement automatique »).
-Le site restera en mode brouillon jusqu'à la fin de la période payée, puis s'éteindra.
-Attention : si tu avais souscrit ton domaine via Squarespace (ce n'est pas ton cas, il est chez LWS), annuler couperait le domaine. Tu es à l'abri.
-
-SEO, image sociale, et le reste
-Ton site a un vrai problème sur ce plan, et c'est structurel, pas cosmétique. Autant le dire franchement.
-
-Le fond du problème. Ton site est une application d'une seule page : la navigation (Work, Commissions, About) ne change pas l'adresse. Tout vit à www.dorothee-murail.com. Conséquence : Google ne voit qu'une seule page. Tes projets AKA, Surfaces, In Between, Shape of Light n'existent pas pour lui. Personne ne peut envoyer le lien direct d'un projet à un directeur artistique. Un moteur ne peut indexer que ce qui a une adresse.
-
-C'est un choix qui a du sens (fluidité, simplicité, un seul fichier), mais il faut savoir ce qu'il coûte. Le corriger vraiment demanderait de séparer les pages ou d'ajouter une gestion d'URL — pas du tout impossible, mais c'est un chantier.
-
-Ce qu'on peut faire tout de suite, et qui donne 80 % du bénéfice :
-
-<title> : aujourd'hui c'est juste « Dorothée Murail ». Ça devrait dire ce que tu fais.
-Meta description : absente. C'est le texte qui s'affiche sous ton nom dans Google.
-Open Graph / Twitter Cards : absents. C'est ta « social image » : quand quelqu'un colle ton lien dans un mail, sur LinkedIn, Instagram ou WhatsApp, il n'y a aujourd'hui aucune vignette. Juste une URL nue. Sur une candidature ou un envoi à une agence, c'est une occasion manquée.
-Favicon : absent. L'onglet du navigateur affiche une page blanche générique.
-Textes alternatifs : tu les as, mais certains sont vides ou identiques (alt="Surfaces" sur 8 images). Google lit ça.
-<html lang="en"> : déjà bon.
-robots.txt et sitemap.xml : utiles, rapides.
-Deux autres choses auxquelles tu ne penses probablement pas :
-
-Le poids des images. C'est le facteur numéro un de la vitesse, et Google en tient compte. Tu as des dizaines d'images en pleine résolution. Vérifie qu'aucune ne dépasse ~300 Ko.
-
-Le chargement différé (loading="lazy"). Aujourd'hui, ton navigateur télécharge toutes les images du site dès l'arrivée, y compris les 16 d'In Between et les séries éditoriales que le visiteur ne verra peut-être jamais. Sur mobile, c'est lourd. Une ligne par image suffit à corriger.
-
-Mon conseil sur l'ordre : commence par les balises <head> (title, description, Open Graph, favicon), c'est une demi-heure et ça change tout ce qui est partage de lien — le plus utile pour toi vu ta cible. Le SEO profond (les URLs par projet) est une autre discussion, à trancher séparément.
-
-Une question avant que je code quoi que ce soit : quelle image veux-tu comme vignette de partage ? Ce sera ce que voient Caractères et tes clients quand ils reçoivent ton lien. Une image existante fait l'affaire (format 1200×630 idéalement), ou tu peux en préparer une. Dis-moi le nom du fichier, et je fais les balises dans la foulée.
-
-tu peux utiliser celle cu qui est sur gitub : home.jpg
-
-Un point technique d'abord, parce qu'il compte : home.jpg est en 16:9 (1600×900), or les vignettes de partage se recadrent en 1200×630 (ratio ≈1.91:1, plus large). Le haut et le bas seront donc légèrement rognés. Ça reste très correct, mais si un jour tu veux un cadrage parfait, tu exportes une version dédiée. Je pars sur home.jpg.
-
-Autre chose : les balises de partage exigent une URL absolue, pas images/home.jpg. Je mets donc le chemin complet vers ton domaine, maintenant qu'il fonctionne.
-
-Je regarde le <head> actuel.
-
-
-A exécuté une commande, fichier modifié
-A exécuté une commande, fichier modifié
-Maintenant les données structurées, qui aident Google à comprendre qui tu es (et rattachent ton nom à tes comptes).
-
-
-A exécuté une commande, fichier modifié
-A exécuté une commande, fichier modifié
-Enfin, le chargement différé des images, qui allège fortement la première visite. J'exclus le hero de la home, qui doit rester immédiat.
-
-
-Add lazy loading to all images except the homepage hero
-Add lazy loading to all images except the homepage hero
-42 images passent en chargement différé, la home reste immédiate. Je crée maintenant les deux fichiers SEO à déposer sur GitHub.
-
-
-2 fichiers créés, a exécuté une commande, lu un fichier
-2 fichiers créés, a exécuté une commande, lu un fichier
-Voilà. Trois fichiers.
-
-Ce que j'ai ajouté dans index.html :
-
-Un titre qui dit enfin ce que tu fais (au lieu de ton nom seul), une description pour Google, les balises Open Graph et Twitter — ta vignette de partage, avec home.jpg — un canonical, un favicon, et des données structurées qui disent à Google que Dorothée Murail est une personne, photographe/cinéaste/curatrice, formée à La Cambre et aux Gobelins.
-
-Et un gain de vitesse invisible mais réel : 42 images passent en chargement différé. Elles ne se téléchargent qu'au moment d'être vues. La home reste immédiate, elle. Sur mobile, la différence est nette.
-
-Ce que tu dois faire :
-
-Recolle index.html dans GitHub (comme d'habitude — ne touche pas au fichier CNAME).
-Dépose robots.txt et sitemap.xml à la racine du dépôt, à côté d'index.html (Add file → Upload files).
-Prépare un favicon : une image carrée, 512×512, nommée favicon.png, dans images/. Tes initiales sur fond crème suffisent. Tant qu'il n'existe pas, l'onglet reste vide, sans autre conséquence.
-Pour tester la vignette de partage, une fois en ligne : va sur https://www.opengraph.xyz, colle ton URL. Tu verras exactement ce que voit LinkedIn ou WhatsApp.
-
-Deux réserves honnêtes.
-
-Le sitemap.xml ne contient qu'une seule adresse, parce que ton site n'a réellement qu'une page. C'est cohérent, mais ça illustre la limite dont je te parlais : Google ne connaîtra jamais AKA ou Shape of Light comme des pages. Aucune balise ne répare ça — seule une refonte des URLs le ferait.
-
-Et il reste ton alt identiques (alt="Surfaces" huit fois). Peu grave, mais si tu veux, on peut les rendre descriptifs.
-
-Deux choses en suspens que je te redois : l'email pro (contact@dorothee-murail.com), et Google Search Console — l'outil gratuit pour déclarer ton site à Google et voir qui te trouve. Ça t'intéresse ?
-
-
-Index
-Code · HTML 
-
-Robots
-TXT 
-
-Sitemap
-XML 
-
-
-
-
-
-
-Claude est une IA et peut faire des erreurs. Veuillez vérifier les réponses.
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,7 +9,7 @@ Index · HTML
 <link rel="canonical" href="https://www.dorothee-murail.com/">
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="images/favicon.png">
- 
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dorothée Murail">
 <meta property="og:title" content="Dorothée Murail ・ Photographer, filmmaker, visual researcher">
@@ -192,7 +20,7 @@ Index · HTML
 <meta property="og:image:height" content="900">
 <meta property="og:image:alt" content="Photograph by Dorothée Murail">
 <meta property="og:locale" content="en_GB">
- 
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dorothée Murail ・ Photographer, filmmaker, visual researcher">
 <meta name="twitter:description" content="An image-maker working between Paris and Tokyo. Photography, film and curation.">
@@ -203,7 +31,7 @@ Index · HTML
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
- 
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:flex;justify-content:space-between;align-items:baseline;background:var(--bg)}
 .nav-name{font-family:var(--serif);font-size:1rem;font-weight:400;text-decoration:none;color:var(--ink);letter-spacing:.01em;cursor:pointer}
@@ -211,7 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .nav-links a{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);font-weight:300;transition:color .2s;cursor:pointer}
 .nav-links a:hover{color:var(--mid)}
 .nav-links a.active{border-bottom:1px solid var(--ink);padding-bottom:1px}
- 
+
 /* PAGES */
 .page{display:none;min-height:100vh}
 .page.active{display:block}
@@ -219,7 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 #home.active{display:block}
 #home img{width:100%;height:100%;object-fit:cover;opacity:.9;filter:grayscale(5%)}
 .home-tagline{position:absolute;bottom:52px;left:52px;font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(246,244,240,.92);text-shadow:0 1px 12px rgba(0,0,0,.22);line-height:1.7;animation:fadeUp .8s ease forwards}
- 
+
 /* WORK */
 #work{padding:110px 52px 100px}
 #commissions{padding:110px 52px 100px}
@@ -229,7 +57,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .work-tab.active{color:var(--ink);border-bottom-color:var(--ink)}
 .work-panel{display:none}
 .work-panel.active{display:block}
- 
+
 /* PROJECTS GRID — décalage uniforme */
 .projects-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:52px;row-gap:0}
 .project-item{padding-bottom:80px;cursor:pointer;text-decoration:none;color:inherit;display:block}
@@ -242,7 +70,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .project-title{font-family:var(--serif);font-size:1.05rem;font-weight:400}
 .project-year{font-size:.7rem;letter-spacing:.08em;color:var(--mid)}
 .project-caption{margin-top:5px;font-size:.76rem;color:var(--mid);font-style:italic}
- 
+
 /* COMMISSIONS */
 .commissions-section{margin-bottom:64px}
 .commissions-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid var(--line)}
@@ -257,7 +85,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .photo-grid-landscape .thumb img{width:100%;height:100%;object-fit:cover;transition:opacity .3s;display:block}
 .photo-grid-landscape .thumb:hover img{opacity:.8}
 .photo-grid-landscape .thumb-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#cac7c0);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
- 
+
 /* VIDEO */
 .video-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
 .video-item{cursor:pointer;display:flex;flex-direction:column}
@@ -269,7 +97,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .video-item:hover .video-play-overlay{opacity:1}
 .video-title{font-family:var(--serif);font-size:.95rem;min-height:1.4em}
 .video-caption{font-size:.72rem;color:var(--mid);font-style:italic;margin-top:4px;min-height:1.3em}
- 
+
 /* VIDEO PLAYER MODAL */
 .video-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(15,15,14,.97);align-items:center;justify-content:center;flex-direction:column}
 .video-modal.open{display:flex}
@@ -278,7 +106,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .video-modal-close{position:absolute;top:28px;right:36px;color:rgba(246,244,240,.7);font-size:1.4rem;cursor:pointer;font-weight:300;transition:color .2s;line-height:1;font-family:var(--sans)}
 .video-modal-close:hover{color:var(--bg)}
 .video-modal-title{margin-top:20px;font-family:var(--serif);font-size:.85rem;font-style:italic;color:rgba(246,244,240,.5);text-align:center}
- 
+
 /* PROJECT PAGE */
 #project-page{padding:110px 52px 100px}
 .project-page-inner{max-width:900px;margin:0 auto}
@@ -321,7 +149,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .pp-festivals-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
 .pp-festival-list{display:flex;flex-direction:column;gap:8px}
 .pp-festival-list span{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--mid)}
- 
+
 /* EDITORIAL GRID */
 .editorial-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:12px}
 .editorial-grid-6{grid-template-columns:repeat(6,1fr)}
@@ -335,10 +163,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .ed-hover span{font-family:var(--serif);font-size:.82rem;font-style:italic;color:rgba(246,244,240,.95);letter-spacing:.02em;line-height:1.3}
 .reportage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:12px}
 .ed-landscape{aspect-ratio:3/2 !important}
- 
+
 /* LIGHTBOX SERIE TITLE */
 .lightbox-title{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);color:rgba(246,244,240,.6);font-size:.72rem;letter-spacing:.14em;font-family:var(--serif);font-style:italic;white-space:nowrap}
- 
+
 /* LIGHTBOX */
 .lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(15,15,14,.96);align-items:center;justify-content:center}
 .lightbox.open{display:flex}
@@ -350,7 +178,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .lightbox-prev{left:20px}
 .lightbox-next{right:20px}
 .lightbox-counter{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:rgba(246,244,240,.4);font-size:.68rem;letter-spacing:.14em;font-family:var(--sans)}
- 
+
 /* EYE */
 #research{padding:110px 52px 100px}
 .research-inner{max-width:1060px;margin:0 auto}
@@ -400,7 +228,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .sol-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
 .sol-thumb:hover img{opacity:.85}
 .sol-caption{font-family:var(--serif);font-size:.78rem;font-style:italic;color:var(--mid);line-height:1.4}
- 
+
 /* ABOUT */
 #about{padding:110px 52px 100px}
 .about-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:88px;align-items:start}
@@ -416,7 +244,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .about-contact{padding-top:28px;border-top:1px solid var(--line)}
 .about-contact a{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--ink);text-decoration:none;transition:color .2s}
 .about-contact a:hover{color:var(--mid)}
- 
+
 /* CONTACT */
 #contact{padding:110px 52px 100px}
 .contact-inner{max-width:560px}
@@ -424,10 +252,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .contact-email{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
 .contact-email:hover{color:var(--mid);border-color:var(--mid)}
 .contact-note{margin-top:40px;font-size:.78rem;color:var(--mid);line-height:1.65;max-width:360px}
- 
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .fade{animation:fadeUp .55s ease forwards}
- 
+
 @media(max-width:720px){
 nav{padding:18px 22px}
 .nav-links{gap:18px}
@@ -463,7 +291,7 @@ nav{padding:18px 22px}
 </script>
 </head>
 <body>
- 
+
 <!-- NAV -->
 <nav>
   <span class="nav-name" onclick="show('home')">Dorothée Murail</span>
@@ -474,18 +302,18 @@ nav{padding:18px 22px}
     <li><a id="n-contact" onclick="show('contact')">Contact</a></li>
   </ul>
 </nav>
- 
+
 <!-- HOME -->
 <div id="home" class="page active">
   <img src="images/home.jpg" alt="Dorothée Murail">
   <div class="home-tagline">Photographer, filmmaker, visual researcher.<br>Paris — Tokyo.</div>
 </div>
- 
+
 <!-- WORK -->
 <div id="work" class="page">
   <div class="work-inner">
     <div class="projects-grid fade">
- 
+
         <div class="project-item" onclick="showProject('shapeoflight')">
           <div class="project-thumb">
             <img loading="lazy" decoding="async" src="images/shape-cover.jpg" alt="Shape of Light" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -497,7 +325,7 @@ nav{padding:18px 22px}
           </div>
           <p class="project-caption">Curation ・ Lin Syouki ・ KURA Gallery, Tokyo</p>
         </div>
- 
+
         <div class="project-item" onclick="showProject('aka')">
           <div class="project-thumb">
             <img loading="lazy" decoding="async" src="images/aka-cover.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -509,7 +337,7 @@ nav{padding:18px 22px}
           </div>
           <p class="project-caption">Short Film ・ Centre Pompidou, 8 international festivals</p>
         </div>
- 
+
         <div class="project-item" onclick="showProject('redscale')">
           <div class="project-thumb">
             <img loading="lazy" decoding="async" src="images/redscale-cover.jpg" alt="Surfaces" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -521,7 +349,7 @@ nav{padding:18px 22px}
           </div>
           <p class="project-caption">Analogue photography ・ Sankai Juku, Butoh, Tokyo</p>
         </div>
- 
+
         <div class="project-item" onclick="showProject('inbetween')">
           <div class="project-thumb">
             <img loading="lazy" decoding="async" src="images/inbetween-cover.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -533,11 +361,11 @@ nav{padding:18px 22px}
           </div>
           <p class="project-caption">Analogue photography ・ interstices, floating spaces</p>
         </div>
- 
+
       </div>
   </div>
 </div>
- 
+
 <!-- COMMISSIONS -->
 <div id="commissions" class="page">
   <div class="work-inner">
@@ -545,13 +373,13 @@ nav{padding:18px 22px}
       <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
       <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
     </div>
- 
+
     <!-- PHOTO -->
     <div id="panel-photo" class="work-panel fade">
       <div class="commissions-section">
         <p class="commissions-label">Editorial · Commercial</p>
         <div class="editorial-grid editorial-grid-6">
- 
+
           <div class="ed-item" onclick="openSerie(0)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-05-cover.jpg" alt="Boycott" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -559,7 +387,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Boycott</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openSerie(1)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-02-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -567,7 +395,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Kissui Campaign</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openSerie(2)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-04-cover.jpg" alt="Scala Regia Dior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -575,7 +403,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Scala Regia × Dior</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openSerie(3)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-07-cover.jpg" alt="The Wild" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -583,7 +411,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>The Wild</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openSerie(4)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-03-cover.jpg" alt="The Fashionisto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -591,7 +419,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>The Fashionisto</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openSerie(5)">
             <div class="ed-thumb">
               <img loading="lazy" decoding="async" src="images/editorial-01-cover.jpg" alt="Mojeh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -599,15 +427,15 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Mojeh × Cartier</span></div>
             </div>
           </div>
- 
+
         </div>
         <p class="photo-note">Selection 2018–2025</p>
       </div>
- 
+
       <div class="commissions-section">
         <p class="commissions-label">Reportage · Backstage · Architecture</p>
         <div class="reportage-grid">
- 
+
           <div class="ed-item" onclick="openReportage(0)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-03-cover.jpg" alt="Cartier boutique Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -615,7 +443,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Cartier Boutique · Japan</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openReportage(1)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-01-cover.jpg" alt="Boucheron Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -623,7 +451,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Boucheron · Tokyo</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openReportage(2)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-05-cover.jpg" alt="Vera Wang Paris I" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -631,7 +459,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Vera Wang · Paris I</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openReportage(3)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-04-cover.jpg" alt="Cartier office Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -639,7 +467,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Cartier Office · Tokyo</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openReportage(4)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-02-cover.jpg" alt="Dior Paris" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -647,7 +475,7 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Dior · Paris</span></div>
             </div>
           </div>
- 
+
           <div class="ed-item" onclick="openReportage(5)">
             <div class="ed-thumb ed-landscape">
               <img loading="lazy" decoding="async" src="images/reportage/reportage-06-cover.jpg" alt="Vera Wang Paris II" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -655,19 +483,19 @@ nav{padding:18px 22px}
               <div class="ed-hover"><span>Vera Wang · Paris II</span></div>
             </div>
           </div>
- 
+
         </div>
         <p class="photo-note">2018–2025</p>
       </div>
     </div>
- 
+
     <!-- VIDEO -->
     <div id="panel-video" class="work-panel fade">
- 
+
       <div class="commissions-section">
         <p class="commissions-label">Fashion · Commercial</p>
         <div class="video-grid">
- 
+
           <div class="video-item" onclick="openVideo('vimeo','1136450768')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-fashion-01-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -677,7 +505,7 @@ nav{padding:18px 22px}
             <p class="video-title">Kissui Campaign</p>
             <p class="video-caption">Commercial</p>
           </div>
- 
+
           <div class="video-item" onclick="openVideo('vimeo','293134888')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-fashion-02-cover.jpg" alt="Scala Regia x Chanel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -687,7 +515,7 @@ nav{padding:18px 22px}
             <p class="video-title">Scala Regia × Chanel</p>
             <p class="video-caption">Fashion Film</p>
           </div>
- 
+
           <div class="video-item" onclick="openVideo('youtube','BssiUzY4TKU')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-fashion-03-cover.jpg" alt="Boycott x St Laurent" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -697,14 +525,14 @@ nav{padding:18px 22px}
             <p class="video-title">Boycott × Saint Laurent</p>
             <p class="video-caption">Fashion Film</p>
           </div>
- 
+
         </div>
       </div>
- 
+
       <div class="commissions-section" style="margin-top:56px">
         <p class="commissions-label">Music Videos</p>
         <div class="video-grid">
- 
+
           <div class="video-item" onclick="openVideo('youtube','faf98cNY8A8')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-music-01-cover.jpg" alt="Joe Hisaishi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -714,7 +542,7 @@ nav{padding:18px 22px}
             <p class="video-title">Ashitaka & San</p>
             <p class="video-caption">Joe Hisaishi (Princess Mononoke) ・ Universal Music</p>
           </div>
- 
+
           <div class="video-item" onclick="openVideo('youtube','cXoVLrJ4EGE')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-music-02-cover.jpg" alt="Bleu Blondino" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -724,7 +552,7 @@ nav{padding:18px 22px}
             <p class="video-title">Bleu</p>
             <p class="video-caption">Blondino ・ independent artist</p>
           </div>
- 
+
           <div class="video-item" onclick="openVideo('youtube','E9n227IwOIg')">
             <div class="video-thumb">
               <img loading="lazy" decoding="async" src="images/video/video-music-03-cover.jpg" alt="OK ou KO Emmy Liyana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -734,20 +562,20 @@ nav{padding:18px 22px}
             <p class="video-title">OK ou KO</p>
             <p class="video-caption">Emmy Liyana ・ Warner Music Group</p>
           </div>
- 
+
         </div>
       </div>
- 
+
     </div>
- 
+
   </div>
 </div>
- 
+
 <!-- PROJECT PAGE -->
 <div id="project-page" class="page">
   <div class="project-page-inner">
     <span class="back-btn fade" onclick="show('work')">Back to Work</span>
- 
+
     <!-- AKA -->
     <div id="pp-aka" class="pp-content" style="display:none">
       <p class="pp-kicker fade">Short Film · 2020-2022</p>
@@ -822,7 +650,7 @@ nav{padding:18px 22px}
         </div>
       </div>
     </div>
- 
+
     <!-- RED SCALE -->
     <div id="pp-redscale" class="pp-content" style="display:none">
       <p class="pp-kicker fade">Analogue Photography · 2021</p>
@@ -859,7 +687,7 @@ nav{padding:18px 22px}
         </div>
       </div>
     </div>
- 
+
     <!-- IN BETWEEN -->
     <div id="pp-inbetween" class="pp-content" style="display:none">
       <p class="pp-kicker fade">Analogue Photography · since 2018</p>
@@ -892,7 +720,7 @@ nav{padding:18px 22px}
         </div>
       </div>
     </div>
- 
+
     <!-- SHAPE OF LIGHT -->
     <div id="pp-shapeoflight" class="pp-content" style="display:none">
       <p class="pp-kicker fade">Curation · 2025</p>
@@ -995,10 +823,10 @@ nav{padding:18px 22px}
         </div>
       </div>
     </div>
- 
+
   </div>
 </div>
- 
+
 <!-- ABOUT -->
 <div id="about" class="page">
   <div class="about-inner fade">
@@ -1016,16 +844,16 @@ nav{padding:18px 22px}
     </div>
   </div>
 </div>
- 
+
 <!-- CONTACT -->
 <div id="contact" class="page">
   <div class="contact-inner fade">
     <h2 class="contact-title">Let's work<br>together.</h2>
-    <a href="mailto:dorotheemurail@gmail.com" class="contact-email">dorotheemurail@gmail.com</a>
+    <a href="mailto:contact@dorothee-murail.com" class="contact-email">contact@dorothee-murail.com</a>
     <p class="contact-note">Based between Paris and Tokyo.<br>Commissions, collaborations, and curatorial projects.</p>
   </div>
 </div>
- 
+
 <!-- VIDEO MODAL -->
 <div class="video-modal" id="video-modal" onclick="closeVideoOutside(event)">
   <span class="video-modal-close" onclick="closeVideo()">✕</span>
@@ -1034,7 +862,7 @@ nav{padding:18px 22px}
     <p class="video-modal-title" id="video-modal-title"></p>
   </div>
 </div>
- 
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
@@ -1044,7 +872,7 @@ nav{padding:18px 22px}
   <span class="lightbox-counter" id="lightbox-counter"></span>
   <span class="lightbox-title" id="lightbox-title"></span>
 </div>
- 
+
 <script>
 const pages=['home','work','commissions','project-page','about','contact'];
 function show(id){
@@ -1066,7 +894,7 @@ function show(id){
     document.querySelectorAll('#commissions .work-panel').forEach(p=>p.classList.remove('active'));
   }
 }
- 
+
 function tab(el,panelId){
   document.querySelectorAll('.work-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.work-panel').forEach(p=>p.classList.remove('active'));
@@ -1074,21 +902,21 @@ function tab(el,panelId){
   const panel=document.getElementById(panelId);
   if(panel){panel.classList.add('active');panel.querySelectorAll('.fade').forEach(el=>{el.style.animation='none';void el.offsetHeight;el.style.animation=''})}
 }
- 
+
 function showProject(id){
   document.querySelectorAll('.pp-content').forEach(el=>el.style.display='none');
   const pp=document.getElementById('pp-'+id);
   if(pp)pp.style.display='block';
   show('project-page');
 }
- 
+
 const galleries={
   reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg'],
   invitation:['images/shape-flyer-1.jpg','images/shape-flyer-2.jpg'],
   redscale:['images/projects/redscale-01.jpg','images/projects/redscale-02.jpg','images/projects/redscale-03.jpg','images/projects/redscale-04.jpg','images/projects/redscale-05.jpg','images/projects/redscale-06.jpg','images/projects/redscale-07.jpg','images/projects/redscale-08.jpg'],
   inbetween:['images/projects/inbetween-01.jpg','images/projects/inbetween-02.jpg','images/projects/inbetween-03.jpg','images/projects/inbetween-04.jpg','images/projects/inbetween-05.jpg','images/projects/inbetween-06.jpg','images/projects/inbetween-07.jpg','images/projects/inbetween-08.jpg','images/projects/inbetween-09.jpg','images/projects/inbetween-10.jpg','images/projects/inbetween-11.jpg','images/projects/inbetween-12.jpg','images/projects/inbetween-13.jpg','images/projects/inbetween-14.jpg','images/projects/inbetween-15.jpg','images/projects/inbetween-16.jpg']
 };
- 
+
 const series=[
   {title:'Boycott', imgs:Array.from({length:9},(_,i)=>`images/editorial-05-0${i+1}.jpg`)},
   {title:'Kissui Campaign', imgs:Array.from({length:5},(_,i)=>`images/editorial-02-0${i+1}.jpg`)},
@@ -1097,7 +925,7 @@ const series=[
   {title:'The Fashionisto', imgs:Array.from({length:4},(_,i)=>`images/editorial-03-0${i+1}.jpg`)},
   {title:'Mojeh × Cartier', imgs:Array.from({length:6},(_,i)=>`images/editorial-01-0${i+1}.jpg`)}
 ];
- 
+
 const reportageSeries=[
   {title:'Cartier Boutique · Japan', imgs:Array.from({length:8},(_,i)=>`images/reportage/reportage-03-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Boucheron · Tokyo', imgs:Array.from({length:16},(_,i)=>`images/reportage/reportage-01-${String(i+1).padStart(2,'0')}.jpg`)},
@@ -1106,7 +934,7 @@ const reportageSeries=[
   {title:'Dior · Paris', imgs:Array.from({length:11},(_,i)=>`images/reportage/reportage-02-${String(i+1).padStart(2,'0')}.jpg`)},
   {title:'Vera Wang · Paris II', imgs:Array.from({length:11},(_,i)=>`images/reportage/reportage-06-${String(i+1).padStart(2,'0')}.jpg`)}
 ];
- 
+
 function openReportage(index){
   const s=reportageSeries[index];
   currentGallery=s.imgs;
@@ -1116,7 +944,7 @@ function openReportage(index){
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow='hidden';
 }
- 
+
 function openSerie(index){
   const s=series[index];
   currentGallery=s.imgs;
@@ -1126,7 +954,7 @@ function openSerie(index){
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow='hidden';
 }
- 
+
 function openVideo(platform, id){
   let src='';
   if(platform==='vimeo') src=`https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0`;
@@ -1143,9 +971,9 @@ function closeVideo(){
 function closeVideoOutside(e){
   if(e.target===document.getElementById('video-modal')) closeVideo();
 }
- 
- 
- 
+
+
+
 let currentGallery=[],currentIndex=0;
 function openLightbox(gallery,index){currentGallery=galleries[gallery];currentIndex=index;currentTitle='';updateLightbox();document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
 function updateLightbox(){
@@ -1158,7 +986,7 @@ function moveLightbox(dir){currentIndex=(currentIndex+dir+currentGallery.length)
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 function closeLightboxOutside(e){if(e.target===document.getElementById('lightbox'))closeLightbox()}
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='ArrowRight')moveLightbox(1);if(e.key==='ArrowLeft')moveLightbox(-1);if(e.key==='Escape')closeLightbox()});
- 
+
 // CARROUSEL SHAPE OF LIGHT
 let solIndex=0;
 function solInitDots(){
@@ -1192,4 +1020,3 @@ solInitDots();
 </script>
 </body>
 </html>
- 
