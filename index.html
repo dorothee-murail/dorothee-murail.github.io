@@ -3,29 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="g1PmV-M_F_H595vtwIdF99jJK71m1_8XueB6Xr8lGoo" />
-<title>Dorothée Murail ・ Photographer, filmmaker & curator ・ Paris</title>
-<meta name="description" content="Dorothée Murail is a French photographer, filmmaker and curator based in Paris, after six years in Japan. Photography, film and curation for houses and institutions including Cartier and Dior.">
-<meta name="author" content="Dorothée Murail">
-<link rel="canonical" href="https://www.dorothee-murail.com/">
-<link rel="icon" href="images/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="images/favicon.png">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Dorothée Murail">
-<meta property="og:title" content="Dorothée Murail ・ Photographer, filmmaker & curator">
-<meta property="og:description" content="Photography, film and curation. Paris, after six years in Tokyo.">
-<meta property="og:url" content="https://www.dorothee-murail.com/">
-<meta property="og:image" content="https://www.dorothee-murail.com/images/share.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Photograph by Dorothée Murail">
-<meta property="og:locale" content="en_GB">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dorothée Murail ・ Photographer, filmmaker & curator">
-<meta name="twitter:description" content="Photography, film and curation. Paris, after six years in Tokyo.">
-<meta name="twitter:image" content="https://www.dorothee-murail.com/images/share.jpg">
+<title>Dorothée Murail</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f4f0;--ink:#0f0f0e;--mid:#8a8880;--line:#d8d5cf;--serif:'EB Garamond',Georgia,serif;--sans:'DM Sans',Helvetica,sans-serif}
@@ -47,11 +25,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 #home{position:fixed;inset:0;display:none;overflow:hidden}
 #home.active{display:block}
 #home img{width:100%;height:100%;object-fit:cover;opacity:.9;filter:grayscale(5%)}
+.home-mobile{display:none}
 .home-tagline{position:absolute;bottom:52px;left:52px;font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(246,244,240,.92);text-shadow:0 1px 12px rgba(0,0,0,.22);line-height:1.7;animation:fadeUp .8s ease forwards}
 
 /* WORK */
 #work{padding:110px 52px 100px}
-#commissions{padding:110px 52px 100px}
 .work-inner{max-width:1060px;margin:0 auto}
 .work-tabs{display:flex;gap:0;margin-bottom:64px;border-bottom:1px solid var(--line)}
 .work-tab{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:300;padding:0 0 14px 0;margin-right:40px;cursor:pointer;color:var(--mid);border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .2s}
@@ -121,11 +99,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .pp-hero{width:100%;aspect-ratio:16/9;background:#e2dfd9;overflow:hidden;margin-bottom:52px}
 .pp-hero img{width:100%;height:100%;object-fit:cover}
 .pp-hero-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--line)}
-.pp-hero-hint{font-size:.72rem;letter-spacing:.04em;color:var(--mid);font-style:italic;cursor:pointer;margin:0 0 44px;transition:color .2s}
-.pp-hero-hint:hover{color:var(--ink)}
-.pp-hero-clickable{position:relative}
-.pp-hero-clickable::after{content:"";position:absolute;inset:0;background:var(--mid);opacity:0;transition:opacity .3s;pointer-events:none}
-.pp-hero-clickable:hover::after{opacity:.32}
 .pp-body-grid{display:grid;grid-template-columns:1fr 320px;gap:80px;margin-bottom:64px}
 .pp-text p{font-family:var(--serif);font-size:1.08rem;line-height:1.82;margin-bottom:20px}
 .pp-text em{font-style:italic}
@@ -141,8 +114,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .pp-gallery-item:hover img{opacity:.85}
 .pp-gallery-ph{width:100%;height:100%;background:linear-gradient(140deg,#e6e3dc,#d4d1cb);display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--line)}
 .pp-instagram{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
-.pp-credits-bottom{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:40px;margin-top:30px}
-.pp-credits-bottom>div{flex:1 1 0;min-width:0}
 .pp-credit{font-size:.92rem;color:var(--mid);margin-top:10px}
 .pp-instagram a{font-family:var(--serif);font-size:.92rem;font-style:italic;color:var(--mid);text-decoration:none;transition:color .2s}
 .pp-instagram a:hover{color:var(--ink)}
@@ -206,14 +177,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .sol-section-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .sol-section-label:first-child{margin-top:0}
 .sol-works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.sol-works-flow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;margin-bottom:16px}
-.sol-work{margin:0;display:flex;flex-direction:column;align-items:center;flex:0 1 auto;max-width:100%}
-.sol-work img{height:360px;width:auto;max-width:100%;display:block;object-fit:contain}
+.sol-works-flow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:32px;margin-bottom:16px}
+.sol-work{margin:0;display:flex;flex-direction:column;align-items:center;flex:1 1 0;min-width:240px;max-width:500px}
+.sol-work img{max-width:100%;max-height:56vh;width:auto;height:auto;display:block;object-fit:contain}
 .sol-work figcaption{margin-top:12px;text-align:center}
 .sol-carousel{position:relative;margin:24px 0 16px;overflow:hidden}
 .sol-carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
 .sol-slide{margin:0;min-width:100%;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.sol-slide img{max-width:100%;width:auto;height:auto;max-height:40vh;object-fit:contain;display:block;margin:0 auto}
+.sol-slide img{max-width:100%;width:auto;height:auto;max-height:68vh;object-fit:contain;display:block;margin:0 auto}
 .sol-slide figcaption{margin-top:12px;text-align:center}
 .sol-arrow{position:absolute;top:calc(50% - 30px);transform:translateY(-50%);background:rgba(246,244,240,.85);border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;font-family:var(--sans);font-size:1rem;color:var(--ink);transition:background .2s;display:flex;align-items:center;justify-content:center}
 .sol-arrow:hover{background:var(--bg)}
@@ -232,13 +203,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 
 /* ABOUT */
 #about{padding:110px 52px 100px}
-.about-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:150px 1fr;gap:56px;align-items:start}
-.about-portrait{aspect-ratio:3/4;max-width:150px;background:#e2dfd9;overflow:hidden}
+.about-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:88px;align-items:start}
+.about-portrait{aspect-ratio:3/4;background:#e2dfd9;overflow:hidden}
 .about-portrait img{width:100%;height:100%;object-fit:cover}
 .about-portrait-ph{width:100%;height:100%;background:linear-gradient(160deg,#e4e1da 0%,#cac7c0 100%)}
 .about-col{padding-top:4px}
 .about-name{font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1.1;margin-bottom:36px}
-.about-name-jp{display:block;font-family:'Noto Serif JP',serif;font-weight:300;font-size:.82rem;color:var(--mid);letter-spacing:.08em;margin-top:12px}
 .about-bio{font-family:var(--serif);font-size:1.04rem;line-height:1.82;margin-bottom:52px;max-width:520px}
 .about-ref-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
 .about-refs{display:flex;flex-wrap:wrap;gap:5px 22px;margin-bottom:52px}
@@ -259,9 +229,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 52px;display:fl
 .fade{animation:fadeUp .55s ease forwards}
 
 @media(max-width:720px){
-nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
-.nav-links{gap:20px}
-#work,#commissions,#research,#about,#contact,#project-page{padding:96px 22px 80px}
+nav{padding:18px 22px}
+.nav-links{gap:18px}
+#work,#research,#about,#contact,#project-page{padding:96px 22px 80px}
 .projects-grid{grid-template-columns:1fr;row-gap:0}
 .project-item:nth-child(even){margin-top:0}
 .photo-grid{grid-template-columns:repeat(2,1fr)}
@@ -270,27 +240,13 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 .about-inner{grid-template-columns:1fr;gap:40px}
 .stats-row{gap:28px;flex-wrap:wrap}
 .home-tagline{left:22px;bottom:40px}
+.home-desktop{display:none}
+.home-mobile{display:block}
 .pp-body-grid{grid-template-columns:1fr}
 .pp-gallery{grid-template-columns:1fr}
 .sol-works-flow{flex-direction:column;align-items:center;gap:40px}
-.sol-work{max-width:100%}
-.pp-credits-bottom{flex-wrap:wrap;gap:28px}
-.pp-credits-bottom>div{flex:1 1 40%}}
+.sol-work{max-width:100%}}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dorothée Murail",
-  "url": "https://www.dorothee-murail.com/",
-  "image": "https://www.dorothee-murail.com/images/portrait.jpg",
-  "jobTitle": "Photographer, filmmaker and curator",
-  "description": "French photographer, filmmaker and curator based in Paris. Photography, film and curation.",
-  "alumniOf": ["La Cambre", "Les Gobelins"],
-  "knowsLanguage": ["en", "fr", "ja"],
-  "sameAs": ["https://www.instagram.com/aka_artproject/"]
-}
-</script>
 </head>
 <body>
 
@@ -299,7 +255,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
   <span class="nav-name" onclick="show('home')">Dorothée Murail</span>
   <ul class="nav-links">
     <li><a id="n-work" onclick="show('work')">Work</a></li>
-    <li><a id="n-commissions" onclick="show('commissions')">Commissions</a></li>
+    <li><a id="n-research" onclick="show('research')">Eye</a></li>
     <li><a id="n-about" onclick="show('about')">About</a></li>
     <li><a id="n-contact" onclick="show('contact')">Contact</a></li>
   </ul>
@@ -307,73 +263,61 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
 <!-- HOME -->
 <div id="home" class="page active">
-  <img src="images/home.jpg" alt="Dorothée Murail">
-  <div class="home-tagline">Photographer, filmmaker & curator.<br>Paris ・ Tokyo.</div>
+  <img src="images/home.jpg" alt="Dorothée Murail" class="home-desktop">
+  <img src="images/home-mobile.jpg" alt="Dorothée Murail" class="home-mobile">
+  <div class="home-tagline">Photographer, filmmaker, visual researcher.<br>Paris — Tokyo.</div>
 </div>
 
 <!-- WORK -->
 <div id="work" class="page">
   <div class="work-inner">
-    <div class="projects-grid fade">
+    <div class="work-tabs">
+      <div class="work-tab active" onclick="tab(this,'panel-projets')">Projects</div>
+      <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
+      <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
+    </div>
 
-        <div class="project-item" onclick="showProject('shapeoflight')">
-          <div class="project-thumb">
-            <img loading="lazy" decoding="async" src="images/shape-cover.jpg" alt="Shape of Light" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="project-thumb-ph" style="display:none">Image</div>
-          </div>
-          <div class="project-meta">
-            <span class="project-title">Shape of Light</span>
-            <span class="project-year">2025</span>
-          </div>
-          <p class="project-caption">Curation ・ Lin Syouki ・ KURA Gallery, Tokyo</p>
-        </div>
+    <!-- PROJECTS -->
+    <div id="panel-projets" class="work-panel active fade">
+      <div class="projects-grid">
 
         <div class="project-item" onclick="showProject('aka')">
           <div class="project-thumb">
-            <img loading="lazy" decoding="async" src="images/aka-cover.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/aka-cover.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="project-thumb-ph" style="display:none">Image</div>
           </div>
           <div class="project-meta">
             <span class="project-title">AKA</span>
-            <span class="project-year">2020-2022</span>
+            <span class="project-year">2020</span>
           </div>
-          <p class="project-caption">Short Film ・ Centre Pompidou, 8 international festivals</p>
+          <p class="project-caption">Short Film — Centre Pompidou, 8 international festivals</p>
         </div>
 
         <div class="project-item" onclick="showProject('redscale')">
           <div class="project-thumb">
-            <img loading="lazy" decoding="async" src="images/redscale-cover.jpg" alt="Surfaces" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/redscale-cover.jpg" alt="Red Scale" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="project-thumb-ph" style="display:none">Image</div>
           </div>
           <div class="project-meta">
-            <span class="project-title">Surfaces</span>
+            <span class="project-title">Red Scale</span>
             <span class="project-year">2021</span>
           </div>
-          <p class="project-caption">Analogue photography ・ Sankai Juku, Butoh, Tokyo</p>
+          <p class="project-caption">Film photography — Sankai Juku, Butoh, Tokyo</p>
         </div>
 
         <div class="project-item" onclick="showProject('inbetween')">
           <div class="project-thumb">
-            <img loading="lazy" decoding="async" src="images/inbetween-cover.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/inbetween-cover.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="project-thumb-ph" style="display:none">Image</div>
           </div>
           <div class="project-meta">
             <span class="project-title">In Between</span>
-            <span class="project-year">since 2018</span>
+            <span class="project-year">2020</span>
           </div>
-          <p class="project-caption">Analogue photography ・ interstices, floating spaces</p>
+          <p class="project-caption">Film photography — interstices, floating spaces</p>
         </div>
 
       </div>
-  </div>
-</div>
-
-<!-- COMMISSIONS -->
-<div id="commissions" class="page">
-  <div class="work-inner">
-    <div class="work-tabs">
-      <div class="work-tab" onclick="tab(this,'panel-photo')">Photo</div>
-      <div class="work-tab" onclick="tab(this,'panel-video')">Video</div>
     </div>
 
     <!-- PHOTO -->
@@ -384,7 +328,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(0)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-05-cover.jpg" alt="Boycott" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-05-cover.jpg" alt="Boycott" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Boycott</span></div>
             </div>
@@ -392,7 +336,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(1)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-02-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-02-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Kissui Campaign</span></div>
             </div>
@@ -400,7 +344,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(2)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-04-cover.jpg" alt="Scala Regia Dior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-04-cover.jpg" alt="Scala Regia Dior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Scala Regia × Dior</span></div>
             </div>
@@ -408,7 +352,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(3)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-07-cover.jpg" alt="The Wild" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-07-cover.jpg" alt="The Wild" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>The Wild</span></div>
             </div>
@@ -416,7 +360,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(4)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-03-cover.jpg" alt="The Fashionisto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-03-cover.jpg" alt="The Fashionisto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>The Fashionisto</span></div>
             </div>
@@ -424,7 +368,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openSerie(5)">
             <div class="ed-thumb">
-              <img loading="lazy" decoding="async" src="images/editorial-01-cover.jpg" alt="Mojeh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/editorial-01-cover.jpg" alt="Mojeh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Mojeh × Cartier</span></div>
             </div>
@@ -440,7 +384,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(0)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-03-cover.jpg" alt="Cartier boutique Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-03-cover.jpg" alt="Cartier boutique Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Cartier Boutique · Japan</span></div>
             </div>
@@ -448,7 +392,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(1)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-01-cover.jpg" alt="Boucheron Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-01-cover.jpg" alt="Boucheron Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Boucheron · Tokyo</span></div>
             </div>
@@ -456,7 +400,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(2)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-05-cover.jpg" alt="Vera Wang Paris I" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-05-cover.jpg" alt="Vera Wang Paris I" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Vera Wang · Paris I</span></div>
             </div>
@@ -464,7 +408,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(3)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-04-cover.jpg" alt="Cartier office Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-04-cover.jpg" alt="Cartier office Tokyo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Cartier Office · Tokyo</span></div>
             </div>
@@ -472,7 +416,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(4)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-02-cover.jpg" alt="Dior Paris" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-02-cover.jpg" alt="Dior Paris" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Dior · Paris</span></div>
             </div>
@@ -480,7 +424,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="ed-item" onclick="openReportage(5)">
             <div class="ed-thumb ed-landscape">
-              <img loading="lazy" decoding="async" src="images/reportage/reportage-06-cover.jpg" alt="Vera Wang Paris II" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/reportage/reportage-06-cover.jpg" alt="Vera Wang Paris II" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="ed-thumb-ph" style="display:none"></div>
               <div class="ed-hover"><span>Vera Wang · Paris II</span></div>
             </div>
@@ -500,7 +444,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="video-item" onclick="openVideo('vimeo','1136450768')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-fashion-01-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-fashion-01-cover.jpg" alt="Kissui Campaign" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
@@ -510,7 +454,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="video-item" onclick="openVideo('vimeo','293134888')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-fashion-02-cover.jpg" alt="Scala Regia x Chanel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-fashion-02-cover.jpg" alt="Scala Regia x Chanel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
@@ -520,7 +464,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="video-item" onclick="openVideo('youtube','BssiUzY4TKU')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-fashion-03-cover.jpg" alt="Boycott x St Laurent" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-fashion-03-cover.jpg" alt="Boycott x St Laurent" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
@@ -537,32 +481,32 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
           <div class="video-item" onclick="openVideo('youtube','faf98cNY8A8')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-music-01-cover.jpg" alt="Joe Hisaishi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-music-01-cover.jpg" alt="Joe Hisaishi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">Ashitaka & San</p>
-            <p class="video-caption">Joe Hisaishi (Princess Mononoke) ・ Universal Music</p>
+            <p class="video-caption">Joe Hisaishi — Princess Mononoke</p>
           </div>
 
           <div class="video-item" onclick="openVideo('youtube','cXoVLrJ4EGE')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-music-02-cover.jpg" alt="Bleu Blondino" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-music-02-cover.jpg" alt="Bleu Blondino" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">Bleu</p>
-            <p class="video-caption">Blondino ・ independent artist</p>
+            <p class="video-caption">Blondino</p>
           </div>
 
           <div class="video-item" onclick="openVideo('youtube','E9n227IwOIg')">
             <div class="video-thumb">
-              <img loading="lazy" decoding="async" src="images/video/video-music-03-cover.jpg" alt="OK ou KO Emmy Liyana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <img src="images/video/video-music-03-cover.jpg" alt="OK ou KO Emmy Liyana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
               <div class="video-thumb-ph" style="display:none"><div class="play-icon"></div></div>
               <div class="video-play-overlay"><div class="play-icon"></div></div>
             </div>
             <p class="video-title">OK ou KO</p>
-            <p class="video-caption">Emmy Liyana ・ Warner Music Group</p>
+            <p class="video-caption">Emmy Liyana</p>
           </div>
 
         </div>
@@ -580,21 +524,18 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
     <!-- AKA -->
     <div id="pp-aka" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Short Film · 2020-2022</p>
+      <p class="pp-kicker fade">Short Film · 2020</p>
       <h1 class="pp-title fade">AKA <span class="pp-title-jp">赤</span></h1>
       <p class="pp-subtitle fade">Dorothée Murail ・ Paris / Tokyo</p>
       <div class="pp-hero fade">
-        <img loading="lazy" decoding="async" src="images/projects/aka-hero.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img src="images/projects/aka-hero.jpg" alt="AKA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="pp-hero-ph" style="display:none">Image</div>
       </div>
       <div class="pp-body-grid fade">
         <div class="pp-text">
-          <p>It all began with an image, before words: the monochrome of a red body inside a red box.</p>
-          <p><em>AKA</em> follows a butoh dancer through seven transformations. The film explores the passages from one inner state to another, when emotion becomes matter, movement, and presence.</p>
-          <p>Born in Japan in the late 1950s, butoh seeks a body stripped of learned gestures, a body crossed by states rather than characters. Here the transformation is built into the film itself: at each stage, a layer of the set disappears and the space tightens, while the body carries a new intensity.</p>
-          <p>Three cameras record different presences of the body at once: the whole of it, a fragment of skin, and a vertical overhead view where the figure seems to detach from itself. These different gazes build a mental space where the body becomes the visible site of an inner transformation.</p>
-          <p>There are no words in the film, only music and dance. Together, movement, sound, and camera compose a language that precedes words, favouring sensation over interpretation.</p>
-          <p>The film never names its states. It simply invites you to move through them.</p>
+          <p>It began with an image, before any words: a body painted red, inside a red box. No horizon, no exit.</p>
+          <p><em>AKA</em> follows a butoh dancer through seven states of psychological descent, from the loss of identity to inner collapse. Butoh, the Japanese dance form developed in the 1970s, asks the performer to inhabit emotion entirely, through the body and the face. Here the descent is built into the film itself: with each state, a layer of the set falls away and the space contracts, while the dancer takes on another weight of feeling, more exposed with every step. Three cameras film at once: the whole body, a fragment of skin, and a view from directly above, where the figure becomes a marionette of its own mind.</p>
+          <p>The film doesn't try to explain the states it stages. It works from a simpler conviction: that some conditions of being resist language, and that the body, under enough pressure, can make them visible.</p>
         </div>
         <div class="pp-meta-block">
           <div class="pp-meta-row">
@@ -606,6 +547,14 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
             <p class="pp-meta-value">Filmed 2019 ・ Released 2020</p>
           </div>
           <div class="pp-meta-row">
+            <p class="pp-meta-label">With</p>
+            <p class="pp-meta-value">Sachiko Ishikawa ・ Compagnie Mā</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Cinematography</p>
+            <p class="pp-meta-value">Quentin Devillers</p>
+          </div>
+          <div class="pp-meta-row">
             <p class="pp-meta-label">Awards</p>
             <p class="pp-meta-value">Jury Prize<br>Signs of the Night, Portugal 2021</p>
           </div>
@@ -613,71 +562,58 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
             <p class="pp-meta-label">Presented at</p>
             <p class="pp-meta-value">Centre Pompidou, Paris<br>Nuit Blanche Kyoto ・ solo show<br>8 international festivals</p>
           </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Production</p>
+            <p class="pp-meta-value">Azadi Production<br>co-production One Day</p>
+          </div>
+          <div class="pp-meta-row">
+            <p class="pp-meta-label">Supported by</p>
+            <p class="pp-meta-value">Fonds pour les Talents Émergents<br>Île-de-France</p>
+          </div>
         </div>
       </div>
       <div class="pp-gallery pp-gallery-square fade">
         <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-01.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="images/projects/aka-01.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="pp-gallery-ph" style="display:none">Image</div>
         </div>
         <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-02.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="images/projects/aka-02.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="pp-gallery-ph" style="display:none">Image</div>
         </div>
         <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-03.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="images/projects/aka-03.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="pp-gallery-ph" style="display:none">Image</div>
         </div>
         <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-04.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="images/projects/aka-04.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="pp-gallery-ph" style="display:none">Image</div>
         </div>
       </div>
       <div class="pp-instagram fade">
-        <a href="https://www.instagram.com/aka_artproject/" target="_blank">→ @aka_artproject</a>
-      </div>
-      <div class="pp-credits-bottom fade">
-        <div>
-          <p class="pp-meta-label">With</p>
-          <p class="pp-meta-value">Sachiko Ishikawa<br>Compagnie Mā</p>
-        </div>
-        <div>
-          <p class="pp-meta-label">Cinematography</p>
-          <p class="pp-meta-value">Quentin Devillers</p>
-        </div>
-        <div>
-          <p class="pp-meta-label">Production</p>
-          <p class="pp-meta-value">Azadi Production<br>co-production One Day</p>
-        </div>
-        <div>
-          <p class="pp-meta-label">Supported by</p>
-          <p class="pp-meta-value">Fonds pour les Talents Émergents<br>Île-de-France</p>
-        </div>
+        <a href="https://www.instagram.com/aka_artproject/" target="_blank">@aka_artproject →</a>
       </div>
     </div>
 
     <!-- RED SCALE -->
     <div id="pp-redscale" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Analogue Photography · 2021</p>
-      <h1 class="pp-title fade">Surfaces</h1>
+      <p class="pp-kicker fade">Film Photography · 2021</p>
+      <h1 class="pp-title fade">Red Scale</h1>
       <p class="pp-subtitle fade">Sankai Juku ・ Tokyo</p>
-      <div class="pp-hero fade pp-hero-clickable" style="aspect-ratio:297/210;margin-bottom:12px">
-        <img loading="lazy" decoding="async" src="images/projects/redscale-01.jpg" alt="Surfaces" style="cursor:pointer" onclick="openLightbox('redscale',0)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="pp-hero fade">
+        <img src="images/projects/redscale-hero.jpg" alt="Red Scale" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="pp-hero-ph" style="display:none">Image</div>
       </div>
-      <p class="pp-hero-hint fade" onclick="openLightbox('redscale',0)">→ click to view the series, 8 images</p>
       <div class="pp-body-grid fade">
         <div class="pp-text">
-          <p><em>Surfaces</em> grew out of my encounter with the Japanese notions of <em>honne</em> and <em>tatemae</em>, which name, depending on the context, what belongs to the intimate self and what is presented to the world. More than an opposition between a "true" and a "false" face, they led me to ask what plays out at the surface of a person: the space where identity is built, transformed, and made visible.</p>
-          <p>Living in Tokyo, I was struck by the place the face holds in many Japanese art forms. Geisha makeup, Noh masks, butoh: they do not tell the same story, but each turns the face into a site of transformation rather than a simple mirror of the inner self. The mask does not necessarily erase identity; it produces it, shifts it, or makes it perceptible in another way. I wanted the faces in this series to work like that: worn like masks, sometimes to the point of exaggeration.</p>
-          <p>Butoh imposed itself naturally. With its bodies crossed by states rather than characters, it offered a language where the surface of the body becomes a site of metamorphosis. <em>Surfaces</em> was made in Tokyo with Dai Matsuoka and Akihito Ichihara, dancers of the Sankai Juku company. I had discovered them on stage in Paris before moving to Japan; working with them became one of the starting points of the project.</p>
-          <p>The images follow a transformation: first whitened bodies whose faces seem to fade, then a face appears, before water runs through the series as a material of passage.</p>
-          <p>Some of the photographs are made in redscale, the film loaded in reverse so that each image is exposed through its own back. The process echoes what runs through the whole series: two faces of the same material, one visible, one hidden. The film does not reveal a hidden truth; it shows that every image already holds several faces. Perhaps our own faces do too.</p>
+          <p>Red Scale was made in a Tokyo studio, face to face with Dai Matsuoka and Akihito Hichihara, dancers of the Sankai Juku company. I had seen the company on stage in Paris before moving to Japan, and the encounter stayed with me; working with them was not a casting choice but the starting point of the project.</p>
+          <p>The series explores <em>honne</em> and <em>tatemae</em>, the gap between the inner self and the social face, a concept I met on arriving in Japan and that became a way to read everything around me. Butoh holds exactly that tension. It does not perform a character; it surfaces what lies beneath one. No model or stranger could have carried this, only a body trained to bring the interior to the skin.</p>
+          <p>The images are shot on reversed film. Loaded backwards, the emulsion turns everything toward red and rust, so that each picture arrives already altered, showing one thing while another burns underneath.</p>
         </div>
         <div class="pp-meta-block">
           <div class="pp-meta-row">
             <p class="pp-meta-label">Format</p>
-            <p class="pp-meta-value">Analogue photography ・ Redscale</p>
+            <p class="pp-meta-value">Film photography ・ Redscale</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Year</p>
@@ -685,7 +621,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">With</p>
-            <p class="pp-meta-value">Dai Matsuoka ・ Akihito Ichihara<br>Sankai Juku company</p>
+            <p class="pp-meta-value">Dai Matsuoka ・ Akihito Hichihara<br>Sankai Juku</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Location</p>
@@ -697,134 +633,114 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 
     <!-- IN BETWEEN -->
     <div id="pp-inbetween" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Analogue Photography · since 2018</p>
+      <p class="pp-kicker fade">Film Photography · 2020</p>
       <h1 class="pp-title fade">In Between</h1>
-      <p class="pp-subtitle fade">Analogue photography</p>
-      <div class="pp-hero fade pp-hero-clickable" style="aspect-ratio:auto;height:auto;line-height:0;margin-bottom:12px">
-        <img loading="lazy" decoding="async" src="images/projects/inbetween-hero.jpg" alt="In Between" style="cursor:pointer;height:auto;display:block;object-fit:contain" onclick="openLightbox('inbetween',0)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <p class="pp-subtitle fade">Film photography</p>
+      <div class="pp-hero fade">
+        <img src="images/projects/inbetween-hero.jpg" alt="In Between" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="pp-hero-ph" style="display:none">Image</div>
       </div>
-      <p class="pp-hero-hint fade" onclick="openLightbox('inbetween',0)">→ click to view the series, 16 images</p>
       <div class="pp-body-grid fade">
         <div class="pp-text">
-          <p>A woman waits out the rain under an umbrella, sunglasses on. A horse stands in a garden like an apparition.</p>
-          <p>For years, travelling, I have photographed moments like these, where something resists. A scene looks familiar, then a detail shifts it. What seems obvious stops being so.</p>
-          <p>The series is built in diptychs, or sometimes around a single image. What binds them is not a story but a tension: a space where several readings can coexist without one erasing the other.</p>
-          <p>Nearly all of these photographs were made on islands. I neither name nor locate them. The island is not the subject of the series; it is its condition. Surrounded by water, it holds a fragile balance, separate without being isolated.</p>
-          <p>The people who appear in these images stay mostly anonymous, sometimes seen from behind, sometimes out of frame. They pass through the photographs more than they inhabit them. Like the places they occupy, they escape any stable definition.</p>
+          <p><em>In Between</em> is built in pairs. Two images placed side by side, holding a single emotion between them, or one image strong enough to carry that suspension alone. The work lives in the gap, the space the eye crosses from one frame to the other.</p>
+          <p>Nothing in these images is named or located. They could be anywhere, and that is the point. What recurs is a quality of in-between: thresholds, waiting, the moment before or after something, a place caught between one state and the next.</p>
+          <p>Human figures appear, faces unseen. They don't play roles or anchor a story. They pass through the image without owning it, anonymous, present for a moment, then gone. They are humanity itself, caught in passing, moving through a world that holds still for no one.</p>
         </div>
         <div class="pp-meta-block">
           <div class="pp-meta-row">
             <p class="pp-meta-label">Format</p>
-            <p class="pp-meta-value">Analogue photography</p>
+            <p class="pp-meta-value">Film photography</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Year</p>
-            <p class="pp-meta-value">since 2018</p>
+            <p class="pp-meta-value">2020</p>
           </div>
           <div class="pp-meta-row">
             <p class="pp-meta-label">Locations</p>
-            <p class="pp-meta-value">Islands</p>
+            <p class="pp-meta-value">Lithuania ・ Japan ・ Mayotte<br>France ・ Bali ・ Lanzarote</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SHAPE OF LIGHT -->
-    <div id="pp-shapeoflight" class="pp-content" style="display:none">
-      <p class="pp-kicker fade">Curation · 2025</p>
-      <h1 class="pp-title fade">Shape of Light</h1>
-      <p class="pp-subtitle fade">Lin Syouki ・ KURA Gallery, Tokyo-Shibuya ・ May 2025</p>
-      <div class="pp-body-grid fade">
-        <div class="pp-text">
-          <p>I saw Lin Syouki's work before I fully understood it. That resistance convinced me it had to be shown.</p>
-          <p>His paintings do not reveal themselves from a fixed position. Their iridescent surface shifts as the gaze moves, bringing out a different image from every point of view. Several presences coexist within a single work. Stand still and the painting seems to close. Step aside and it opens again.</p>
-          <p>What drew me to his work is this way of turning looking into a physical experience. The image is not only in front of us: it is built in the encounter between the work and the one who looks at it.</p>
-          <p>Designing this exhibition was therefore not simply a matter of placing works in a space, but of creating the conditions for an encounter. The hang, the distances, and the spaces between the paintings were conceived to invite the viewer to slow down, to move, and to become part of the image.</p>
-          <p>My time in Japan also attuned me to a sense of space where the interval, silence, and emptiness can fully take part in an experience. The exhibition was conceived in that spirit: giving the works the space they need to appear.</p>
-          <p><em>Shape of Light</em> was Lin Syouki's first solo exhibition.</p>
-        </div>
-        <div class="pp-meta-block">
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Role</p>
-            <p class="pp-meta-value">Curator</p>
-          </div>
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Artist</p>
-            <p class="pp-meta-value">Lin Syouki</p>
-          </div>
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Venue</p>
-            <p class="pp-meta-value">KURA Gallery<br>Tokyo-Shibuya</p>
-          </div>
-          <div class="pp-meta-row">
-            <p class="pp-meta-label">Date</p>
-            <p class="pp-meta-value">May 2025</p>
-          </div>
-        </div>
-      </div>
+  </div>
+</div>
+
+<!-- EYE -->
+<div id="research" class="page">
+  <div class="research-inner">
+    <div class="eye-intro fade">
+      <p>Eye is where the looking happens. A space for the work that comes before the work: the images I collect, the artists I follow, the exhibitions I build. Some of it becomes a project years later. Some of it stays here, a record of what holds my attention and why.</p>
+    </div>
+    <div class="eye-project fade">
+      <p class="eye-kicker">Curation · Tokyo · 2025</p>
+      <h2 class="eye-title">Shape of Light<br><em>Lin Syouki</em></h2>
+      <p class="eye-subtitle">KURA, Shibuya ・ May 2025</p>
+      <p class="eye-body">I saw Lin's work before I understood it, which is exactly what made me want to show it. The pieces don't resolve from a distance. The reflective surface shifts as you move, so the image you see is one you partly make yourself. Stand still and it closes. Step sideways and it opens again.</p>
+      <p class="eye-body">Curating the show meant building for that. Not hanging objects on walls, but shaping a space where the work could do what it does: ask the viewer to move, to be present, to complete the picture. Six years in Japan taught me to treat emptiness as material rather than absence, and that is the principle the exhibition was built on.</p>
+      <p class="eye-body">Shape of Light was Lin Syouki's first solo exhibition. Eighteen works, shown at KURA in Shibuya, May 2025.</p>
       <div class="stats-row">
         <div class="stat"><span class="stat-n">18</span><span class="stat-l">works</span></div>
-        <div class="stat"><span class="stat-n">4</span><span class="stat-l">acquisitions</span></div>
-        <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening guests</span></div>
+        <div class="stat"><span class="stat-n">4</span><span class="stat-l">sold</span></div>
+        <div class="stat"><span class="stat-n">22%</span><span class="stat-l">sales rate</span></div>
+        <div class="stat"><span class="stat-n">80+</span><span class="stat-l">opening night</span></div>
       </div>
-      <div class="sol-gallery fade">
-        <div class="sol-section-label">Artwork</div>
+      <!-- GALERIE SHAPE OF LIGHT -->
+      <div class="sol-gallery">
+
+        <!-- Œuvres — flux respectant les formats natifs -->
+        <div class="sol-section-label">Work</div>
         <div class="sol-works-flow">
           <figure class="sol-work">
-            <img loading="lazy" decoding="async" src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <img src="images/shape-01.jpg" alt="Lin Syouki 202407S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
             <figcaption class="sol-caption">Lin Syouki, 202407S</figcaption>
           </figure>
           <figure class="sol-work">
-            <img loading="lazy" decoding="async" src="images/shape-02.jpg" alt="Lin Syouki 202409S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
+            <img src="images/shape-02.jpg" alt="Lin Syouki 202409S" onerror="this.style.background='#e2dfd9';this.style.minHeight='300px'">
             <figcaption class="sol-caption">One work, three viewpoints ・ Lin Syouki, 202409S</figcaption>
           </figure>
         </div>
+
+        <!-- Exhibition — carrousel pleine largeur -->
         <div class="sol-section-label">The Exhibition</div>
         <div class="sol-carousel">
           <div class="sol-carousel-track" id="sol-track">
             <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-05.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
-              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
-            </figure>
-            <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-06.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
-              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
-            </figure>
-            <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-07.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
-              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
-            </figure>
-            <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-04.jpg" alt="Install view" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <img src="images/shape-04.jpg" alt="Install view" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
               <figcaption class="sol-caption">Install view</figcaption>
             </figure>
             <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-08.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <img src="images/shape-05.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-06.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-07.jpg" alt="Exhibition" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ Lin Syouki, 2025</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img src="images/shape-08.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
               <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
             </figure>
             <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-09.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <img src="images/shape-09.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
               <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
             </figure>
             <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-10.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <img src="images/shape-10.jpg" alt="Opening" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
               <figcaption class="sol-caption">Opening ・ KURA Gallery, Tokyo-Shibuya, May 2025</figcaption>
-            </figure>
-            <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-flyer-1.jpg" alt="Invitation recto" style="cursor:pointer" onclick="openLightbox('invitation',0)" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
-              <figcaption class="sol-caption">Invitation ・ recto</figcaption>
-            </figure>
-            <figure class="sol-slide">
-              <img loading="lazy" decoding="async" src="images/shape-flyer-2.jpg" alt="Invitation verso" style="cursor:pointer" onclick="openLightbox('invitation',1)" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
-              <figcaption class="sol-caption">Invitation ・ verso</figcaption>
             </figure>
           </div>
           <button class="sol-arrow sol-arrow-prev" onclick="solSlide(-1)" aria-label="Previous">←</button>
           <button class="sol-arrow sol-arrow-next" onclick="solSlide(1)" aria-label="Next">→</button>
           <div class="sol-dots" id="sol-dots"></div>
         </div>
+
       </div>
+
       <div class="press-block">
         <p class="press-l">Press</p>
         <div class="press-links">
@@ -834,7 +750,12 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
         </div>
       </div>
     </div>
-
+    <div class="eye-project fade">
+      <p class="eye-kicker">Visual Archive</p>
+      <h2 class="eye-title">Eight Years<br><em>of Looking</em></h2>
+      <p class="eye-subtitle">A journal of images ・ since 2018</p>
+      <p class="eye-placeholder">References, intuitions, obsessions gathered since 2018.</p>
+    </div>
   </div>
 </div>
 
@@ -842,17 +763,23 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 <div id="about" class="page">
   <div class="about-inner fade">
     <div class="about-portrait">
-      <img loading="lazy" decoding="async" src="images/portrait.jpg" alt="Dorothée Murail" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/portrait.jpg" alt="Dorothée Murail" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <div class="about-portrait-ph" style="display:none"></div>
     </div>
     <div class="about-col">
-      <h1 class="about-name">Dorothée<br>Murail<span class="about-name-jp">ムライ・ドロテ</span></h1>
+      <h1 class="about-name">Dorothée<br>Murail</h1>
       <p class="about-bio">
-        Dorothée Murail is a French photographer, filmmaker and curator. After six years living and working in Japan, she is now based in Paris.<br><br>
-        Her projects often begin with an image, before words. They then develop through visual associations, research and collaborations, until they find the form (photograph, film or exhibition) that is their own.<br><br>
-        A graduate of La Cambre and Les Gobelins, she has spent more than ten years developing a practice at the crossroads of the still and moving image. Her personal work has been shown at the Centre Pompidou and Nuit Blanche Kyoto, among others. In 2025 she curated <em>Shape of Light</em>, the first solo exhibition of the painter Lin Syouki, in Tokyo.<br><br>
-        Alongside her personal practice, she collaborates with houses and institutions such as Cartier and Dior.
+        An image-maker whose work explores thresholds — between cultures, between states, between what shows itself and what resists being seen.<br><br>
+        Trained at La Cambre and Les Gobelins, she has developed over ten years a practice that crosses photography, cinema and visual research. Her personal projects — rooted in cultural tensions and interstitial spaces — have been presented at Centre Pompidou and Nuit Blanche Kyoto.<br><br>
+        In parallel, she collaborates with leading houses and institutions — Cartier, Dior, Vogue — on projects where the image is at stake. Her curatorial work, born from a visual archive built over several years, extends the same posture: not to classify the world in images, but to reveal its frictions.
       </p>
+      <p class="about-ref-label">Selected collaborations</p>
+      <div class="about-refs">
+        <span>Dior</span><span>Calvin Klein</span><span>Vogue US</span><span>Ami</span><span>Ana Khouri</span><span>Boycott Magazine</span><span>Vision Paradox Tokyo</span><span>Officine Universelle Bully</span><span>Vera Wang</span><span>Boucheron</span><span>Emilio Pucci</span><span>Cartier</span><span>Hugo Matha</span><span>Harper's Bazaar</span><span>Karl Lagerfeld</span><span>Repossi</span><span>Centre Pompidou</span><span>Nuit Blanche Kyoto</span><span>Joe Hisaishi</span>
+      </div>
+      <div class="about-contact">
+        <a href="mailto:contact@dorothee-murail.com">contact@dorothee-murail.com</a>
+      </div>
     </div>
   </div>
 </div>
@@ -862,7 +789,7 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
   <div class="contact-inner fade">
     <h2 class="contact-title">Let's work<br>together.</h2>
     <a href="mailto:contact@dorothee-murail.com" class="contact-email">contact@dorothee-murail.com</a>
-    <p class="contact-note">Based in Paris ・ six years in Tokyo.<br>Commissions, collaborations, and curatorial projects.</p>
+    <p class="contact-note">Based between Paris and Tokyo.<br>Available for commissions, collaborations, curatorial projects.</p>
   </div>
 </div>
 
@@ -879,14 +806,14 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
   <span class="lightbox-prev" onclick="moveLightbox(-1)">←</span>
-  <img loading="lazy" decoding="async" class="lightbox-img" id="lightbox-img" src="" alt="">
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
   <span class="lightbox-next" onclick="moveLightbox(1)">→</span>
   <span class="lightbox-counter" id="lightbox-counter"></span>
   <span class="lightbox-title" id="lightbox-title"></span>
 </div>
 
 <script>
-const pages=['home','work','commissions','project-page','about','contact'];
+const pages=['home','work','project-page','research','about','contact'];
 function show(id){
   pages.forEach(p=>{
     const el=document.getElementById(p);
@@ -900,11 +827,6 @@ function show(id){
   if(n)n.classList.add('active');
   // keep Work nav active when on project page
   if(id==='project-page'){const nw=document.getElementById('n-work');if(nw)nw.classList.add('active')}
-  // commissions opens on the tab choice, no panel shown until clicked
-  if(id==='commissions'){
-    document.querySelectorAll('#commissions .work-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('#commissions .work-panel').forEach(p=>p.classList.remove('active'));
-  }
 }
 
 function tab(el,panelId){
@@ -923,10 +845,7 @@ function showProject(id){
 }
 
 const galleries={
-  reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg'],
-  invitation:['images/shape-flyer-1.jpg','images/shape-flyer-2.jpg'],
-  redscale:['images/projects/redscale-01.jpg','images/projects/redscale-02.jpg','images/projects/redscale-03.jpg','images/projects/redscale-04.jpg','images/projects/redscale-05.jpg','images/projects/redscale-06.jpg','images/projects/redscale-07.jpg','images/projects/redscale-08.jpg'],
-  inbetween:['images/projects/inbetween-01.jpg','images/projects/inbetween-02.jpg','images/projects/inbetween-03.jpg','images/projects/inbetween-04.jpg','images/projects/inbetween-05.jpg','images/projects/inbetween-06.jpg','images/projects/inbetween-07.jpg','images/projects/inbetween-08.jpg','images/projects/inbetween-09.jpg','images/projects/inbetween-10.jpg','images/projects/inbetween-11.jpg','images/projects/inbetween-12.jpg','images/projects/inbetween-13.jpg','images/projects/inbetween-14.jpg','images/projects/inbetween-15.jpg','images/projects/inbetween-16.jpg']
+  reportage:['images/photo-rep-01.jpg','images/photo-rep-02.jpg','images/photo-rep-03.jpg','images/photo-rep-04.jpg','images/photo-rep-05.jpg','images/photo-rep-06.jpg']
 };
 
 const series=[
