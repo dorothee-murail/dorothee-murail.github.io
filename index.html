@@ -623,22 +623,33 @@ nav{padding:16px 22px;flex-direction:column;align-items:flex-start;gap:10px}
           </div>
         </div>
       </div>
-      <div class="pp-gallery pp-gallery-square fade">
-        <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-01.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="pp-gallery-ph" style="display:none">Image</div>
-        </div>
-        <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-02.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="pp-gallery-ph" style="display:none">Image</div>
-        </div>
-        <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-03.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="pp-gallery-ph" style="display:none">Image</div>
-        </div>
-        <div class="pp-gallery-item pp-square">
-          <img loading="lazy" decoding="async" src="images/projects/aka-04.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="pp-gallery-ph" style="display:none">Image</div>
+      <div class="sol-gallery fade">
+        <div class="sol-carousel">
+          <div class="sol-carousel-track" id="aka-track">
+            <figure class="sol-slide">
+              <img loading="lazy" decoding="async" src="images/projects/aka-01.jpg" alt="AKA film still" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Still from the film</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img loading="lazy" decoding="async" src="images/projects/aka-02.jpg" alt="Invitation Nuit Blanche Kyoto recto" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Invitation ・ Nuit Blanche Kyoto, recto</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img loading="lazy" decoding="async" src="images/projects/aka-03.jpg" alt="Invitation Nuit Blanche Kyoto verso" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Invitation ・ Nuit Blanche Kyoto, verso</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img loading="lazy" decoding="async" src="images/projects/aka-04.jpg" alt="Zen House Gallery" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Zen House Gallery</figcaption>
+            </figure>
+            <figure class="sol-slide">
+              <img loading="lazy" decoding="async" src="images/projects/aka-05.jpg" alt="Exhibition scenography" onerror="this.style.background='#e2dfd9';this.style.minHeight='400px'">
+              <figcaption class="sol-caption">Exhibition ・ scenography</figcaption>
+            </figure>
+          </div>
+          <button class="sol-arrow sol-arrow-prev" onclick="akaSlide(-1)" aria-label="Previous">←</button>
+          <button class="sol-arrow sol-arrow-next" onclick="akaSlide(1)" aria-label="Next">→</button>
+          <div class="sol-dots" id="aka-dots"></div>
         </div>
       </div>
       <div class="pp-instagram fade">
@@ -1032,7 +1043,7 @@ function solUpdate(){
   const track=document.getElementById('sol-track');
   if(!track)return;
   track.style.transform=`translateX(-${solIndex*100}%)`;
-  document.querySelectorAll('.sol-dot').forEach((d,i)=>d.classList.toggle('active',i===solIndex));
+  document.querySelectorAll('#sol-dots .sol-dot').forEach((d,i)=>d.classList.toggle('active',i===solIndex));
 }
 function solSlide(dir){
   const track=document.getElementById('sol-track');
@@ -1043,6 +1054,37 @@ function solSlide(dir){
 }
 function solGoTo(i){solIndex=i;solUpdate()}
 solInitDots();
+
+// CARROUSEL AKA
+let akaIndex=0;
+function akaInitDots(){
+  const track=document.getElementById('aka-track');
+  const dots=document.getElementById('aka-dots');
+  if(!track||!dots)return;
+  const n=track.children.length;
+  dots.innerHTML='';
+  for(let i=0;i<n;i++){
+    const b=document.createElement('button');
+    b.className='sol-dot'+(i===0?' active':'');
+    b.onclick=()=>akaGoTo(i);
+    dots.appendChild(b);
+  }
+}
+function akaUpdate(){
+  const track=document.getElementById('aka-track');
+  if(!track)return;
+  track.style.transform=`translateX(-${akaIndex*100}%)`;
+  document.querySelectorAll('#aka-dots .sol-dot').forEach((d,i)=>d.classList.toggle('active',i===akaIndex));
+}
+function akaSlide(dir){
+  const track=document.getElementById('aka-track');
+  if(!track)return;
+  const n=track.children.length;
+  akaIndex=(akaIndex+dir+n)%n;
+  akaUpdate();
+}
+function akaGoTo(i){akaIndex=i;akaUpdate()}
+akaInitDots();
 </script>
 </body>
 </html>
